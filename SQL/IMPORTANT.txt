@@ -1,0 +1,1 @@
+Just some SQL basic examples of use, made for some workshops for University

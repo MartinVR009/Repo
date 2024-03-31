@@ -1,0 +1,602 @@
+[
+  {
+    "movieId": "1196",
+    "rating": 4.0,
+    "fecha": "jun 2, 2008",
+    "userId": 139030
+  },
+  {
+    "movieId": "2628",
+    "rating": 4.0,
+    "fecha": "jun 23, 1999",
+    "userId": 129525
+  },
+  {
+    "movieId": "377",
+    "rating": 3.0,
+    "fecha": "ago 6, 2005",
+    "userId": 12787
+  },
+  {
+    "movieId": "1997",
+    "rating": 4.0,
+    "fecha": "sept 22, 2010",
+    "userId": 65460
+  },
+  {
+    "movieId": "356",
+    "rating": 3.0,
+    "fecha": "sept 21, 2015",
+    "userId": 133604
+  },
+  {
+    "movieId": "356",
+    "rating": 5.0,
+    "fecha": "jul 24, 1996",
+    "userId": 261718
+  },
+  {
+    "movieId": "356",
+    "rating": 4.0,
+    "fecha": "mar 7, 2005",
+    "userId": 186416
+  },
+  {
+    "movieId": "377",
+    "rating": 4.0,
+    "fecha": "may 17, 2013",
+    "userId": 64058
+  },
+  {
+    "movieId": "377",
+    "rating": 4.0,
+    "fecha": "oct 5, 1996",
+    "userId": 43111
+  },
+  {
+    "movieId": "1342",
+    "rating": 4.0,
+    "fecha": "dic 24, 1996",
+    "userId": 113435
+  },
+  {
+    "movieId": "356",
+    "rating": 4.0,
+    "fecha": "oct 17, 2010",
+    "userId": 265622
+  },
+  {
+    "movieId": "3827",
+    "rating": 3.0,
+    "fecha": "sept 20, 2010",
+    "userId": 271898
+  },
+  {
+    "movieId": "798",
+    "rating": 2.0,
+    "fecha": "may 4, 2000",
+    "userId": 25661
+  },
+  {
+    "movieId": "356",
+    "rating": 4.0,
+    "fecha": "oct 12, 2009",
+    "userId": 27955
+  },
+  {
+    "movieId": "356",
+    "rating": 5.0,
+    "fecha": "jun 5, 2004",
+    "userId": 74255
+  },
+  {
+    "movieId": "1610",
+    "rating": 4.0,
+    "fecha": "ago 8, 2008",
+    "userId": 142472
+  },
+  {
+    "movieId": "1196",
+    "rating": 1.0,
+    "fecha": "oct 22, 2017",
+    "userId": 43916
+  },
+  {
+    "movieId": "356",
+    "rating": 4.0,
+    "fecha": "jul 3, 2015",
+    "userId": 135138
+  },
+  {
+    "movieId": "1610",
+    "rating": 3.0,
+    "fecha": "jun 7, 2018",
+    "userId": 249652
+  },
+  {
+    "movieId": "378",
+    "rating": 4.0,
+    "fecha": "abr 25, 2000",
+    "userId": 205705
+  },
+  {
+    "movieId": "2959",
+    "rating": 4.0,
+    "fecha": "mar 22, 2011",
+    "userId": 235061
+  },
+  {
+    "movieId": "1610",
+    "rating": 5.0,
+    "fecha": "may 9, 2000",
+    "userId": 181966
+  },
+  {
+    "movieId": "356",
+    "rating": 5.0,
+    "fecha": "jun 1, 2016",
+    "userId": 181181
+  },
+  {
+    "movieId": "2959",
+    "rating": 5.0,
+    "fecha": "abr 29, 2016",
+    "userId": 39879
+  },
+  {
+    "movieId": "356",
+    "rating": 2.0,
+    "fecha": "sept 21, 2010",
+    "userId": 242141
+  },
+  {
+    "movieId": "1918",
+    "rating": 3.0,
+    "fecha": "ene 4, 2001",
+    "userId": 203084
+  },
+  {
+    "movieId": "1196",
+    "rating": 5.0,
+    "fecha": "jun 3, 2010",
+    "userId": 270326
+  },
+  {
+    "movieId": "378",
+    "rating": 4.0,
+    "fecha": "jun 8, 1996",
+    "userId": 12974
+  },
+  {
+    "movieId": "1196",
+    "rating": 4.0,
+    "fecha": "nov 13, 2006",
+    "userId": 25369
+  },
+  {
+    "movieId": "2959",
+    "rating": 5.0,
+    "fecha": "mar 9, 2003",
+    "userId": 148970
+  },
+  {
+    "movieId": "1196",
+    "rating": 3.0,
+    "fecha": "nov 4, 2015",
+    "userId": 6314
+  },
+  {
+    "movieId": "1196",
+    "rating": 5.0,
+    "fecha": "ago 3, 2000",
+    "userId": 63956
+  },
+  {
+    "movieId": "2959",
+    "rating": 5.0,
+    "fecha": "jul 4, 2004",
+    "userId": 148202
+  },
+  {
+    "movieId": "2959",
+    "rating": 5.0,
+    "fecha": "may 14, 2017",
+    "userId": 139121
+  },
+  {
+    "movieId": "1610",
+    "rating": 5.0,
+    "fecha": "ene 27, 2000",
+    "userId": 138329
+  },
+  {
+    "movieId": "1196",
+    "rating": 5.0,
+    "fecha": "oct 13, 2005",
+    "userId": 66932
+  },
+  {
+    "movieId": "175",
+    "rating": 3.0,
+    "fecha": "abr 9, 2000",
+    "userId": 113038
+  },
+  {
+    "movieId": "356",
+    "rating": 3.0,
+    "fecha": "jul 23, 1996",
+    "userId": 250840
+  },
+  {
+    "movieId": "1196",
+    "rating": 2.0,
+    "fecha": "sept 16, 2017",
+    "userId": 221566
+  },
+  {
+    "movieId": "1101",
+    "rating": 4.0,
+    "fecha": "nov 12, 2016",
+    "userId": 101333
+  },
+  {
+    "movieId": "2959",
+    "rating": 5.0,
+    "fecha": "ago 12, 2010",
+    "userId": 181987
+  },
+  {
+    "movieId": "1196",
+    "rating": 1.0,
+    "fecha": "dic 15, 2015",
+    "userId": 120574
+  },
+  {
+    "movieId": "356",
+    "rating": 3.0,
+    "fecha": "nov 5, 1999",
+    "userId": 84500
+  },
+  {
+    "movieId": "1101",
+    "rating": 2.0,
+    "fecha": "may 29, 2005",
+    "userId": 252133
+  },
+  {
+    "movieId": "2628",
+    "rating": 3.0,
+    "fecha": "dic 12, 1999",
+    "userId": 226968
+  },
+  {
+    "movieId": "356",
+    "rating": 1.0,
+    "fecha": "jul 26, 2017",
+    "userId": 169869
+  },
+  {
+    "movieId": "356",
+    "rating": 5.0,
+    "fecha": "jul 15, 2015",
+    "userId": 35387
+  },
+  {
+    "movieId": "2259",
+    "rating": 4.0,
+    "fecha": "nov 26, 2000",
+    "userId": 112491
+  },
+  {
+    "movieId": "356",
+    "rating": 5.0,
+    "fecha": "oct 3, 1996",
+    "userId": 30274
+  },
+  {
+    "movieId": "1101",
+    "rating": 1.0,
+    "fecha": "nov 16, 2003",
+    "userId": 277685
+  },
+  {
+    "movieId": "2959",
+    "rating": 5.0,
+    "fecha": "jul 16, 2017",
+    "userId": 57067
+  },
+  {
+    "movieId": "1196",
+    "rating": 3.0,
+    "fecha": "sept 20, 2007",
+    "userId": 77351
+  },
+  {
+    "movieId": "1997",
+    "rating": 5.0,
+    "fecha": "dic 1, 1999",
+    "userId": 261014
+  },
+  {
+    "movieId": "377",
+    "rating": 1.0,
+    "fecha": "ago 19, 2001",
+    "userId": 211820
+  },
+  {
+    "movieId": "377",
+    "rating": 4.0,
+    "fecha": "dic 6, 1996",
+    "userId": 233154
+  },
+  {
+    "movieId": "356",
+    "rating": 4.0,
+    "fecha": "jul 9, 2016",
+    "userId": 40009
+  },
+  {
+    "movieId": "2628",
+    "rating": 2.0,
+    "fecha": "oct 15, 2017",
+    "userId": 24296
+  },
+  {
+    "movieId": "377",
+    "rating": 4.0,
+    "fecha": "jul 2, 2001",
+    "userId": 11434
+  },
+  {
+    "movieId": "377",
+    "rating": 3.0,
+    "fecha": "oct 19, 2016",
+    "userId": 89930
+  },
+  {
+    "movieId": "1196",
+    "rating": 4.0,
+    "fecha": "may 14, 2009",
+    "userId": 40144
+  },
+  {
+    "movieId": "2959",
+    "rating": 5.0,
+    "fecha": "nov 20, 2015",
+    "userId": 276087
+  },
+  {
+    "movieId": "2628",
+    "rating": 3.0,
+    "fecha": "jun 4, 2004",
+    "userId": 113857
+  },
+  {
+    "movieId": "377",
+    "rating": 4.0,
+    "fecha": "may 19, 2002",
+    "userId": 10729
+  },
+  {
+    "movieId": "356",
+    "rating": 4.0,
+    "fecha": "mar 11, 2016",
+    "userId": 97414
+  },
+  {
+    "movieId": "377",
+    "rating": 3.0,
+    "fecha": "jun 25, 1996",
+    "userId": 77864
+  },
+  {
+    "movieId": "1196",
+    "rating": 5.0,
+    "fecha": "dic 23, 1999",
+    "userId": 8955
+  },
+  {
+    "movieId": "356",
+    "rating": 4.0,
+    "fecha": "ene 29, 2015",
+    "userId": 101692
+  },
+  {
+    "movieId": "1610",
+    "rating": 4.0,
+    "fecha": "dic 12, 2004",
+    "userId": 99115
+  },
+  {
+    "movieId": "2259",
+    "rating": 2.0,
+    "fecha": "jun 19, 2004",
+    "userId": 95944
+  },
+  {
+    "movieId": "377",
+    "rating": 4.0,
+    "fecha": "nov 27, 2002",
+    "userId": 33002
+  },
+  {
+    "movieId": "356",
+    "rating": 5.0,
+    "fecha": "ago 19, 2005",
+    "userId": 73915
+  },
+  {
+    "movieId": "356",
+    "rating": 3.0,
+    "fecha": "mar 16, 2006",
+    "userId": 239254
+  },
+  {
+    "movieId": "1997",
+    "rating": 2.0,
+    "fecha": "ene 3, 2004",
+    "userId": 45307
+  },
+  {
+    "movieId": "295",
+    "rating": 5.0,
+    "fecha": "jul 9, 1996",
+    "userId": 236843
+  },
+  {
+    "movieId": "1196",
+    "rating": 5.0,
+    "fecha": "ago 5, 2018",
+    "userId": 43096
+  },
+  {
+    "movieId": "356",
+    "rating": 4.0,
+    "fecha": "oct 18, 2010",
+    "userId": 41225
+  },
+  {
+    "movieId": "2959",
+    "rating": 5.0,
+    "fecha": "may 20, 2007",
+    "userId": 125436
+  },
+  {
+    "movieId": "356",
+    "rating": 4.0,
+    "fecha": "ene 31, 2006",
+    "userId": 140308
+  },
+  {
+    "movieId": "377",
+    "rating": 4.0,
+    "fecha": "sept 25, 1996",
+    "userId": 266650
+  },
+  {
+    "movieId": "1196",
+    "rating": 5.0,
+    "fecha": "oct 1, 2009",
+    "userId": 267592
+  },
+  {
+    "movieId": "356",
+    "rating": 1.0,
+    "fecha": "jul 31, 1996",
+    "userId": 51309
+  },
+  {
+    "movieId": "2628",
+    "rating": 3.0,
+    "fecha": "nov 8, 2005",
+    "userId": 4455
+  },
+  {
+    "movieId": "377",
+    "rating": 4.0,
+    "fecha": "abr 25, 2016",
+    "userId": 222829
+  },
+  {
+    "movieId": "1610",
+    "rating": 4.0,
+    "fecha": "ene 27, 2018",
+    "userId": 18350
+  },
+  {
+    "movieId": "356",
+    "rating": 5.0,
+    "fecha": "jun 26, 1996",
+    "userId": 193765
+  },
+  {
+    "movieId": "1610",
+    "rating": 4.0,
+    "fecha": "dic 5, 2005",
+    "userId": 123248
+  },
+  {
+    "movieId": "377",
+    "rating": 4.0,
+    "fecha": "ene 26, 1997",
+    "userId": 111901
+  },
+  {
+    "movieId": "377",
+    "rating": 5.0,
+    "fecha": "ago 15, 2001",
+    "userId": 267132
+  },
+  {
+    "movieId": "356",
+    "rating": 3.0,
+    "fecha": "nov 10, 2006",
+    "userId": 198427
+  },
+  {
+    "movieId": "1918",
+    "rating": 4.0,
+    "fecha": "jul 29, 2014",
+    "userId": 68333
+  },
+  {
+    "movieId": "1196",
+    "rating": 4.0,
+    "fecha": "oct 18, 2014",
+    "userId": 160697
+  },
+  {
+    "movieId": "3827",
+    "rating": 3.0,
+    "fecha": "oct 21, 2008",
+    "userId": 151107
+  },
+  {
+    "movieId": "2351",
+    "rating": 5.0,
+    "fecha": "nov 15, 2014",
+    "userId": 2025
+  },
+  {
+    "movieId": "2959",
+    "rating": 5.0,
+    "fecha": "oct 8, 2016",
+    "userId": 17175
+  },
+  {
+    "movieId": "356",
+    "rating": 4.0,
+    "fecha": "feb 16, 2017",
+    "userId": 42298
+  },
+  {
+    "movieId": "1918",
+    "rating": 2.0,
+    "fecha": "ene 23, 2001",
+    "userId": 225189
+  },
+  {
+    "movieId": "377",
+    "rating": 3.0,
+    "fecha": "mar 1, 2017",
+    "userId": 95932
+  },
+  {
+    "movieId": "356",
+    "rating": 5.0,
+    "fecha": "mar 26, 1999",
+    "userId": 177349
+  },
+  {
+    "movieId": "1918",
+    "rating": 1.0,
+    "fecha": "ago 17, 2011",
+    "userId": 280538
+  },
+  {
+    "movieId": "1101",
+    "rating": 5.0,
+    "fecha": "jun 5, 2008",
+    "userId": 108564
+  }
+]

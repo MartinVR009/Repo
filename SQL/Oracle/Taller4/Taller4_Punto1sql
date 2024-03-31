@@ -1,0 +1,224 @@
+/*
+- PREMIERL_Matches;
+- PREMIERL_Teams;
+- PREMIERL_Actions;
+- PREMIERL_Players;
+*/
+
+SELECT *
+FROM
+    JLEON.PREMIERL_Matches;
+    
+SELECT *
+FROM
+    JLEON.PREMIERL_Teams;
+    
+SELECT *
+FROM
+    JLEON.PREMIERL_Actions
+    order by matchid;
+    
+SELECT *
+FROM
+    JLEON.PREMIERL_Players;
+    
+--Punto2
+SELECT 
+    m.matchid,
+    CASE
+       m.resultofteamhome 
+       WHEN -1 THEN 'Perdio'
+       WHEN 1 THEN 'Gano'
+       WHEN 0 THEN 'Empate'
+       END Resultado
+    , th.name "Local", ta.name "Visitante", TO_CHAR(m.date_, 'DD-MM-YYYY') Fecha_Partido
+FROM
+    JLEON.PREMIERL_Matches M
+    INNER JOIN
+    JLEON.PREMIERL_Teams TH
+    ON m.teamhomeid = th.teamid
+    INNER JOIN
+    JLEON.PREMIERL_Teams TA
+    ON m.teamawayid = ta.teamid
+    order by m.matchid;
+    
+--Punto3
+SELECT Partidos.Equipo, SUM(Partidos.PartidosGanados) Partidos_Ganados
+FROM (
+    SELECT 
+         th.name Equipo, count(*) PartidosGanados
+    FROM
+        JLEON.PREMIERL_Matches M
+        INNER JOIN
+        JLEON.PREMIERL_Teams TH
+        ON m.teamhomeid = th.teamid
+        WHERE m.resultofteamhome = 1
+        group by th.name
+    UNION
+    SELECT 
+         TA.name , count(*)
+    FROM
+        JLEON.PREMIERL_Matches M
+        INNER JOIN
+        JLEON.PREMIERL_Teams TA
+        ON m.teamawayid = TA.teamid
+        WHERE m.resultofteamhome = -1
+        group by TA.name
+    )Partidos
+    GROUP BY Partidos.equipo;
+    
+--Punto4
+SELECT *
+FROM JLEON.PREMIERL_Players
+WHERE NOT REGEXP_LIKE(TRIM(NAME),' ');
+
+--Punto5
+WITH promedio (prom)
+AS(
+    SELECT AVG(ac.TIMEPLAYED)
+    FROM JLEON.PREMIERL_Actions AC 
+   ) 
+    SELECT pl.name,ROUND(AVG(ac.TIMEPLAYED), 2)PromedioJugado
+    FROM 
+        JLEON.PREMIERL_Players PL
+        INNER JOIN 
+        JLEON.PREMIERL_Actions AC
+        ON
+        pl.playerid = ac.playerid,
+        PROMEDIO 
+    GROUP BY pl.name, Promedio.prom
+    HAVING 
+        AVG(ac.TIMEPLAYED) < Promedio.prom
+    order by PromedioJugado desc;
+
+--Punto 6
+WITH promedio (prom)
+AS(
+    SELECT AVG(ac.TIMEPLAYED)
+    FROM JLEON.PREMIERL_Actions AC 
+   ) 
+    SELECT pl.name,ROUND(AVG(ac.TIMEPLAYED), 2)Total, 'MENOR_MEDIA' DESCRIPCCION
+    FROM 
+        JLEON.PREMIERL_Players PL
+        INNER JOIN 
+        JLEON.PREMIERL_Actions AC
+        ON
+        pl.playerid = ac.playerid,
+        PROMEDIO 
+    GROUP BY pl.name, Promedio.prom
+    HAVING 
+        AVG(ac.TIMEPLAYED) < Promedio.prom
+    UNION
+    SELECT pl.name,ROUND(AVG(ac.TIMEPLAYED), 2)Total, 'MAYOR_MEDIA' DESCRIPCCION
+    FROM 
+        JLEON.PREMIERL_Players PL
+        INNER JOIN 
+        JLEON.PREMIERL_Actions AC
+        ON
+        pl.playerid = ac.playerid,
+        PROMEDIO 
+    GROUP BY pl.name, Promedio.prom
+    HAVING 
+        AVG(ac.TIMEPLAYED) > Promedio.prom;
+        
+--Punto 7
+SELECT DISTINCT pl.name
+FROM
+    JLEON.PREMIERL_Actions A
+    INNER JOIN 
+    JLEON.PREMIERL_Players PL
+    ON 
+    a.playerid = pl.playerid
+    WHERE a.teamid =(
+        SELECT t.teamid
+        FROM
+            JLEON.PREMIERL_Teams T
+            WHERE t.name = 'Manchester City'
+            );
+            
+--Punto 8
+SELECT M.matchid, th.name Local, ta.name Visitante, TO_CHAR(m.date_, 'DD-MM-YYYY') Fecha_Partido, SUM(a.PENALTIESTAKEN) Penaltis
+FROM
+    JLEON.PREMIERL_Matches M
+    INNER JOIN 
+    JLEON.PREMIERL_Actions A
+    ON m.matchid = a.matchid
+    INNER JOIN
+    JLEON.PREMIERL_Teams TH
+    ON m.teamhomeid = th.teamid
+    INNER JOIN
+    JLEON.PREMIERL_Teams TA
+    ON m.teamawayid = ta.teamid
+    
+WHERE
+    TO_CHAR(m.date_, 'YYYY') = '2011' 
+    and a.PENALTIESTAKEN > 0 
+    and UPPER(th.name) NOT IN('ARSENAL','EVERTON','MANCHESTER CITY')
+    and UPPER(ta.name) NOT IN('ARSENAL','EVERTON','MANCHESTER CITY')
+    GROUP BY M.matchid, th.name , ta.name, TO_CHAR(m.date_, 'DD-MM-YYYY')
+    order by m.matchid;
+    
+--Punto 9
+
+SELECT pl.name
+FROM 
+    JLEON.PREMIERL_Actions A
+    INNER JOIN 
+    JLEON.PREMIERL_Players PL
+    ON 
+    a.playerid = pl.playerid
+WHERE 
+    a.matchid = (
+        SELECT PMG.matchid
+        FROM(
+            SELECT A.matchid, SUM(A.goals) Goles
+            FROM 
+               JLEON.PREMIERL_Matches M
+                INNER JOIN 
+                JLEON.PREMIERL_Actions A
+                ON m.matchid = a.matchid
+            WHERE 
+                TO_CHAR(m.date_, 'YYYY-MM') between '2012-01' and '2012-06' 
+            group by a.matchid 
+            order by Goles desc
+            )PMG
+        WHERE ROWNUM = 1
+            )
+        ORDER BY pl.name;
+--Punto 10
+/*Planteamiento
+obtener una lista de jugadores que hayan anotado 
+al menos 10 goles en la temporada 2012
+*/
+
+
+SELECT
+    p.name,
+    p.playerid,
+    SUM(A.goals) Goles
+FROM
+    JLEON.PREMIERL_Players P
+INNER JOIN
+    JLEON.PREMIERL_Actions A ON p.playerid = a.playerid
+INNER JOIN
+    JLEON.PREMIERL_Matches M ON m.matchid = a.matchid
+WHERE
+    TO_CHAR(m.date_, 'YYYY') = '2012'
+    AND P.playerid IN (
+        SELECT ac.playerid
+        FROM 
+            JLEON.PREMIERL_Matches M
+        INNER JOIN 
+            JLEON.PREMIERL_Actions AC ON m.matchid = ac.matchid
+        WHERE 
+            TO_CHAR(m.date_, 'YYYY') = '2012'
+        GROUP BY ac.playerid
+        HAVING SUM(ac.goals) >= 10
+    )
+GROUP BY 
+        p.name,
+    p.playerid;
+
+
+       
+

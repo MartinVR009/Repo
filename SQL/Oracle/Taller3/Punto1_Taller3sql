@@ -1,0 +1,116 @@
+/*
+- CUSTOMERS_VEHICLES_RELATION
+- CUSTOMERS
+- VEHICLES
+*/
+
+--Punto 1
+CREATE VIEW T3_vasquez_martin_1  as
+SELECT * FROM ALL_CONSTRAINTS
+where owner ='JLEON' and table_name in (
+        'CUSTOMERS_VEHICLES_RELATION',
+        'CUSTOMERS',
+        'VEHICLES'
+)
+and constraint_type in ('R','P')
+order by table_name
+;
+    
+select * from all_cons_columns
+where constraint_name = 'SYS_C008875';
+
+SELECT * 
+FROM
+    JLEON.CUSTOMERS_VEHICLES_RELATION CV
+    order by cv.id_customer;
+    
+SELECT * 
+FROM 
+    JLEON.CUSTOMERS C
+    order by C.ID_CUSTOMER;
+    
+SELECT *
+FROM
+    JLEON.VEHICLES;
+    
+--Punto 2
+create view T3_vasquez_martin_2 as
+SELECT C.NAME, C.LAST_NAME, C.AGE, V.BRAND, v.color, V.MODEL, v.year
+FROM 
+JLEON.CUSTOMERS_VEHICLES_RELATION CR
+INNER JOIN
+JLEON.CUSTOMERS C ON c.id_customer = cr.id_customer
+INNER JOIN
+JLEON.VEHICLES V ON v.id_vehicle= cr.id_vehicle
+order by c.id_customer;
+
+--Punto3
+create view T3_vasquez_martin_3 as
+SELECT 
+    ROUND(AVG(average_age), 2) AS avg_age
+FROM (
+    SELECT 
+        AVG(C.AGE) AS average_age
+    FROM 
+        JLEON.CUSTOMERS_VEHICLES_RELATION CR
+    INNER JOIN 
+    JLEON.CUSTOMERS C ON C.ID_CUSTOMER = CR.ID_CUSTOMER
+    INNER JOIN 
+    JLEON.VEHICLES V ON V.ID_VEHICLE = CR.ID_VEHICLE
+    );
+
+
+
+--Punto4
+create view T3_vasquez_martin_4 as
+SELECT  v.brand ,COUNT(v.brand) "Total Marca", MAX(v.year) "Mas reciente" 
+FROM
+    JLEON.VEHICLES V
+    GROUP BY v.brand;
+    
+--Punto5
+create view T3_vasquez_martin_5 as
+SELECT 
+    C.NAME AS NOMBRE,
+    C.LAST_NAME AS APELLIDO,
+    C.AGE AS EDAD,
+    CVR.MILEAGE_KM AS KILOMETROS_RECORRIDOS,
+    V.BRAND AS MARCA,
+    V.MODEL AS MODELO,
+    V.YEAR AS AÑO,
+    V.COLOR AS COLOR,
+    'OK' AS VERIFICADO
+FROM 
+    jleon.CUSTOMERS C
+LEFT JOIN 
+    jleon.CUSTOMERS_VEHICLES_RELATION CVR ON C.ID_CUSTOMER = CVR.ID_CUSTOMER
+LEFT JOIN 
+    jleon.VEHICLES V ON CVR.ID_VEHICLE = V.ID_VEHICLE
+union
+SELECT 
+    null AS NOMBRE,
+    null AS APELLIDO,
+    null AS EDAD,
+    null AS KILOMETROS_RECORRIDOS,
+    V.BRAND AS MARCA,
+    V.MODEL AS MODELO,
+    V.YEAR AS AÑO,
+    V.COLOR AS COLOR,
+    'OK' AS VERIFICADO
+FROM 
+    jleon.VEHICLES V 
+where v.ID_VEHICLE not in (select ID_VEHICLE from jleon.CUSTOMERS_VEHICLES_RELATION)
+order by 1,2;
+
+
+grant select on  T3_vasquez_martin_1  to     jleon;
+
+grant select on  T3_vasquez_martin_2  to     jleon;
+
+grant select on  T3_vasquez_martin_3  to     jleon;
+
+grant select on  T3_vasquez_martin_4  to     jleon;
+
+grant select on  T3_vasquez_martin_5  to     jleon;
+
+    

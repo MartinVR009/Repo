@@ -1,0 +1,9 @@
+com\mycompany\javadb\JavaDB.class
+com\mycompany\javadb\DBManager.class
+com\mycompany\javadb\CSVController.class
+com\mycompany\javadb\Pelicula.class
+com\mycompany\javadb\Constants.class
+com\mycompany\javadb\Rating.class
+com\mycompany\javadb\Usuario.class
+com\mycompany\javadb\IMethodsDB.class
+com\mycompany\javadb\JSONController.class

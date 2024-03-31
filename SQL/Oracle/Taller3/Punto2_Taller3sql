@@ -1,0 +1,266 @@
+--Punto 6
+/* Descargue el CSV, lo pase a visual studio code y con
+Ctrl+F y remplazar por enter quite todos los "TIEMPOS" 
+de la casilla fechas, de ahi simplemente importe los 
+datos a Oracle, cambie el formato en que recibia las 
+fechas, y finalmente Oracle me creo un archivo llamado 
+Importar-query-csv-bad_2023.08.16-18.35.41.sql con los
+INSERT INTO para los datos, mando errores en algunas 
+filas y otras las metia sin problema alguno por lo
+que no estoy seguro de que haya metido todos
+los datos del CSV original*/
+
+--Punto7
+/*
+Descargue el archivo CSV desde el link
+y le di importar datos desde Oracle
+y los importo exitosamente*/
+
+
+
+
+
+
+SELECT * 
+FROM 
+    TASA_CAMBIO;
+
+SELECT distinct platform
+FROM
+     jleon.videogames_sales;
+--Punto 8
+
+SELECT DISTINCT *
+FROM
+    jleon.videogames_sales JV;
+    
+
+
+--Punto 8
+UPDATE VIDEOGAMESDATES
+SET PLATAFORMA = 
+    CASE PLATAFORMA
+    WHEN 'Microsoft Windows' THEN 'X360'
+    WHEN 'Xbox One' THEN 'X360'
+    WHEN 'macOS' THEN 'PS2'
+    WHEN 'macOS' THEN 'XB'
+    WHEN 'Nintendo DS' THEN 'PS2'
+    WHEN 'Nintendo DS' THEN 'PSP'
+    WHEN 'PlayStation' THEN 'PS2'
+    WHEN 'PlayStation' THEN 'XB'
+    WHEN 'Microsoft Windows' THEN 'PS4'
+    WHEN 'PlayStation 4' THEN 'PS3'
+    WHEN 'PlayStation 5' THEN 'X360'
+    WHEN 'Xbox Series XS' THEN 'PC'
+    WHEN 'Nintendo DS' THEN 'DS'
+    WHEN 'Nintendo Wii U' THEN 'XOne'
+    WHEN 'Linux' THEN 'PC'
+    WHEN 'Nintendo Switch' THEN 'SNES'
+    WHEN 'macOS' THEN 'X360'
+    WHEN 'DOS' THEN 'PS'
+    WHEN 'Super Nintendo Entertainment System' THEN 'PS'
+    WHEN 'PlayStation Vita' THEN 'PS2'
+    WHEN 'Nintendo Switch' THEN 'XB'
+    WHEN 'iOS' THEN 'PC'
+    WHEN 'PlayStation 2' THEN 'GC'
+    WHEN 'Nintendo DS' THEN 'X360'
+    WHEN 'Nintendo DS' THEN 'GC'
+    WHEN 'Nintendo GameCube' THEN 'PSP'
+    WHEN 'Nintendo GameCube' THEN 'X360'
+    WHEN 'PlayStation 4' THEN 'PC'
+    WHEN 'PlayStation 5' THEN 'PS3'
+    WHEN 'Xbox Series XS' THEN 'PS4'
+    WHEN 'PlayStation Portable' THEN 'DS'
+    WHEN 'Wii' THEN 'PSP'
+    WHEN 'Nintendo DS' THEN 'PS3'
+    WHEN 'Android' THEN 'PS3'
+    WHEN 'Xbox' THEN 'PS3'
+    WHEN 'Nintendo 3DS' THEN 'PS3'
+    WHEN 'macOS' THEN 'PS3'
+    WHEN 'PlayStation 3' THEN 'GC'
+    WHEN 'Wii' THEN 'XB'
+    WHEN 'Wii' THEN 'DS'
+    WHEN 'Nintendo Entertainment System' THEN 'NES'
+    WHEN 'Nintendo 3DS' THEN 'NES'
+    WHEN 'Xbox 360' THEN 'X360'
+    WHEN 'Microsoft Windows' THEN 'PS3'
+    WHEN 'Microsoft Windows' THEN 'PC'
+    WHEN 'PlayStation 3' THEN 'PS3'
+    WHEN 'Xbox' THEN 'PSP'
+    WHEN 'PlayStation Portable' THEN 'PS2'
+    WHEN 'Game Boy Advance' THEN 'XB'
+    WHEN 'Game Boy Advance' THEN 'X360'
+    WHEN 'Game Boy Advance' THEN 'GC'
+    WHEN 'PlayStation 3' THEN 'XOne'
+    WHEN 'Xbox 360' THEN 'PS4'
+    WHEN 'PlayStation 5' THEN 'XOne'
+    WHEN 'Android' THEN 'PSP'
+    WHEN 'Wii' THEN 'PS2'
+    WHEN 'Wii' THEN 'X360'
+    WHEN 'iOS' THEN 'Wii'
+    WHEN 'Nintendo DS' THEN 'Wii'
+    WHEN 'PlayStation Vita' THEN 'PS3'
+    WHEN 'PlayStation 2' THEN 'PS'
+    WHEN 'Nintendo Switch' THEN 'X360'
+    WHEN 'PlayStation Vita' THEN 'PC'
+    WHEN 'Xbox' THEN 'Wii'
+    WHEN 'Microsoft Windows' THEN 'DS'
+    WHEN 'Wii' THEN 'SNES'
+    WHEN 'MS-DOS' THEN 'PS'
+    WHEN 'Sega Genesis' THEN 'PS'
+    WHEN 'PlayStation' THEN 'N64'
+    WHEN 'Xbox 360' THEN 'PS3'
+    WHEN 'Microsoft Windows' THEN 'PS2'
+    WHEN 'Xbox 360' THEN 'XB'
+    WHEN 'iOS' THEN 'PS2'
+    WHEN 'Windows Phone' THEN 'XB'
+    WHEN 'Nintendo GameCube' THEN 'XB'
+    WHEN 'PlayStation 2' THEN 'PSP'
+    WHEN 'Xbox' THEN 'GC'
+    WHEN 'PlayStation Portable' THEN 'GC'
+    WHEN 'Game Boy Advance' THEN 'PSP'
+    WHEN 'PlayStation 2' THEN 'PS3'
+    WHEN 'Microsoft Windows' THEN 'XOne'
+    WHEN 'Xbox Series XS' THEN 'PS3'
+    WHEN 'Xbox Series XS' THEN 'XOne'
+    WHEN 'PlayStation 3' THEN 'PSP'
+    WHEN 'iOS' THEN 'PS3'
+    WHEN 'PlayStation Portable' THEN 'PS3'
+    WHEN 'PlayStation 2' THEN 'Wii'
+    WHEN 'Xbox 360' THEN 'Wii'
+    WHEN 'PlayStation Portable' THEN 'Wii'
+    WHEN 'macOS' THEN 'Wii'
+    WHEN 'macOS' THEN 'PSP'
+    WHEN 'Microsoft Windows' THEN 'SNES'
+    WHEN 'Nintendo DS' THEN 'SNES'
+    WHEN 'Game Boy' THEN 'PS'
+    WHEN 'Game Boy Advance' THEN 'NES'
+    WHEN 'Wii' THEN '3DS'
+    WHEN 'PlayStation 3' THEN 'X360'
+    WHEN 'Nintendo Wii U' THEN 'PS3'
+    WHEN 'Nintendo Wii U' THEN 'PC'
+    WHEN 'PlayStation 3' THEN 'XB'
+    WHEN 'Xbox' THEN 'PS2'
+    WHEN 'Windows Phone' THEN 'PS2'
+    WHEN 'Windows Phone' THEN 'PC'
+    WHEN 'Microsoft Windows' THEN 'PSP'
+    WHEN 'PlayStation 2' THEN 'X360'
+    WHEN 'Xbox 360' THEN 'PSP'
+    WHEN 'Xbox 360' THEN 'GC'
+    WHEN 'PlayStation Portable' THEN 'X360'
+    WHEN 'Game Boy Advance' THEN 'PS2'
+    WHEN 'PlayStation 3' THEN 'PS4'
+    WHEN 'Xbox Series XS' THEN 'X360'
+    WHEN 'iOS' THEN 'DS'
+    WHEN 'Wii' THEN 'PS3'
+    WHEN 'iOS' THEN 'X360'
+    WHEN 'PlayStation 3' THEN 'Wii'
+    WHEN 'Linux' THEN 'PS2'
+    WHEN 'Nintendo Wii U' THEN 'SNES'
+    WHEN 'Game Boy Advance' THEN 'SNES'
+    WHEN 'SNES Classic Edition' THEN 'SNES'
+    WHEN 'PlayStation' THEN 'DS'
+    WHEN 'Super Nintendo Entertainment System' THEN 'DS'
+    WHEN 'Sega Saturn' THEN 'PS'
+    WHEN 'PlayStation Vita' THEN 'PSV'
+    WHEN 'Nintendo Wii U' THEN 'X360'
+    WHEN 'PlayStation 3' THEN 'PS2'
+    WHEN 'iOS' THEN 'XB'
+    WHEN 'Xbox One' THEN 'PC'
+    WHEN 'PlayStation Portable' THEN 'XB'
+    WHEN 'Microsoft Windows' THEN 'GC'
+    WHEN 'Xbox' THEN 'X360'
+    WHEN 'Xbox 360' THEN 'XOne'
+    WHEN 'PlayStation 4' THEN 'XOne'
+    WHEN 'PlayStation 5' THEN 'PS4'
+    WHEN 'Microsoft Windows' THEN 'Wii'
+    WHEN 'PlayStation Vita' THEN 'Wii'
+    WHEN 'Xbox One' THEN 'XB'
+    WHEN 'Xbox Series XS' THEN 'XB'
+    WHEN 'Super Nintendo Entertainment System' THEN 'SNES'
+    WHEN 'Nintendo GameCube' THEN 'Wii'
+    WHEN 'Android' THEN 'SNES'
+    WHEN 'Nintendo 64' THEN 'N64'
+    WHEN 'Nintendo 3DS' THEN '3DS'
+    WHEN 'macOS' THEN 'PS4'
+    WHEN 'Nintendo Switch' THEN 'XOne'
+    WHEN 'Android' THEN 'PS2'
+    WHEN 'Android' THEN 'XB'
+    WHEN 'Android' THEN 'PC'
+    WHEN 'Microsoft Windows' THEN 'XB'
+    WHEN 'PlayStation 2' THEN 'XB'
+    WHEN 'PlayStation 2' THEN 'PC'
+    WHEN 'macOS' THEN 'PC'
+    WHEN 'Xbox 360' THEN 'PS2'
+    WHEN 'Xbox' THEN 'XB'
+    WHEN 'Xbox' THEN 'PC'
+    WHEN 'Xbox One' THEN 'PS3'
+    WHEN 'Nintendo DS' THEN 'XB'
+    WHEN 'PlayStation Portable' THEN 'PSP'
+    WHEN 'Nintendo GameCube' THEN 'GC'
+    WHEN 'PlayStation 4' THEN 'X360'
+    WHEN 'PlayStation 5' THEN 'PC'
+    WHEN 'Wii' THEN 'Wii'
+    WHEN 'Microsoft Windows' THEN 'PS'
+    WHEN 'Nintendo Switch' THEN 'PS3'
+    WHEN 'PlayStation Portable' THEN 'PC'
+    WHEN 'Wii' THEN 'GC'
+    WHEN 'PlayStation 4' THEN 'PS2'
+    WHEN 'Nintendo 64' THEN 'PS'
+    WHEN 'Nintendo Wii U' THEN 'WiiU'
+    WHEN 'Nintendo Switch' THEN 'PS4'
+    WHEN 'PlayStation 3' THEN 'PC'
+    WHEN 'Xbox 360' THEN 'PC'
+    WHEN 'PlayStation 2' THEN 'PS2'
+    WHEN 'Nintendo GameCube' THEN 'PS2'
+    WHEN 'PlayStation 4' THEN 'PS4'
+    WHEN 'Xbox One' THEN 'PS4'
+    WHEN 'Xbox One' THEN 'XOne'
+    WHEN 'Android' THEN 'DS'
+    WHEN 'iOS' THEN 'PSP'
+    WHEN 'PlayStation Vita' THEN 'X360'
+    WHEN 'PlayStation' THEN 'PS'
+    WHEN 'Nintendo Wii U' THEN 'PS4'
+    WHEN 'Linux' THEN 'X360'
+    WHEN 'Linux' THEN 'PS3'
+    WHEN 'New Nintendo 3DS' THEN 'SNES'
+    WHEN 'Nintendo GameCube' THEN 'PS3'
+    WHEN 'PlayStation' THEN 'SNES'
+    WHEN 'iOS' THEN 'SNES'
+    WHEN 'Famicom Disk System' THEN 'NES'
+    WHEN 'Nintendo 3DS' THEN 'Wii'
+    WHEN 'Linux' THEN 'PS4'
+    ELSE PLATAFORMA
+    END;
+
+
+--punto 9
+
+create view T3_vasquez_martin_9 as
+SELECT EXTRACT(YEAR FROM fecha) AS anno,
+       EXTRACT(MONTH FROM fecha) AS mes,
+       COUNT(*) AS cantidad_de_juegos
+FROM videogamesdates
+WHERE fecha BETWEEN TO_DATE('2000-01-01', 'YYYY-MM-DD') AND TO_DATE('2020-12-31', 'YYYY-MM-DD')
+GROUP BY EXTRACT(YEAR FROM fecha), EXTRACT(MONTH FROM fecha)
+ORDER BY anno, mes;
+
+--punto 10
+create view T3_vasquez_martin_10 as
+SELECT año, mes, cantidad_de_juegos
+FROM (
+    SELECT TO_CHAR(fecha, 'YYYY') AS año,
+           TO_CHAR(fecha, 'MM') AS mes,
+           COUNT(*) AS cantidad_de_juegos
+    FROM videogamesdates
+    WHERE fecha BETWEEN TO_DATE('1990-01-01', 'YYYY-MM-DD') AND TO_DATE('2000-12-31', 'YYYY-MM-DD')
+    GROUP BY TO_CHAR(fecha, 'YYYY'), TO_CHAR(fecha, 'MM')
+    HAVING COUNT(*) < 5
+    ORDER BY 3 desc,1,2
+)   
+WHERE ROWNUM <= 10;
+    
+
+grant select on  T3_vasquez_martin_9  to     jleon;
+                    
+grant select on  T3_vasquez_martin_10 to     jleon;    

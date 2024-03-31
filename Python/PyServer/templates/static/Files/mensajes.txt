@@ -1,0 +1,18 @@
+Mensaje recibido [2023-11-19 16:36:04], mensaje: "aaaaa" 
+Mensaje recibido [2023-11-19 16:36:05], mensaje: "aaaaa" 
+Mensaje recibido [2023-11-19 16:38:27], mensaje: "Hola servidor" 
+Mensaje recibido [2023-11-19 16:52:38], No se pudo cargar el mensaje 
+Mensaje de error [2023-11-19 16:55:15]: El formulario no se valido correctamente. 
+Mensaje de error [2023-11-19 16:55:51]: El formulario no se valido correctamente. 
+Mensaje recibido [2023-11-19 17:04:57], mensaje: "Hola Mundo (Tarde)" 
+Mensaje recibido [2023-11-19 17:05:27], mensaje: "Prueba Final?" 
+Mensaje recibido [2023-11-19 17:12:27], mensaje: "Prueba Final?" 
+Mensaje recibido [2023-11-20 14:02:37], mensaje: "Prueba Final?" 
+Mensaje de error [2023-11-20 14:02:42]: El mensaje estaba vacío., posible mensaje: 
+Mensaje de error [2023-11-20 14:02:44]: El mensaje estaba vacío., posible mensaje: 
+Mensaje recibido [2023-11-20 14:03:11], mensaje: "un mensaje" 
+Mensaje de error [2023-11-20 14:03:25]: El mensaje estaba vacío., posible mensaje: 
+Mensaje de error [2023-11-20 14:03:26]: El mensaje estaba vacío., posible mensaje: 
+Mensaje de error [2023-11-20 14:24:41]: El mensaje estaba vacío., posible mensaje: 
+Mensaje recibido [2023-11-20 14:24:46], mensaje: "Hola servidor" 
+Mensaje de error [2023-11-20 14:24:56]: El mensaje estaba vacío., posible mensaje: 

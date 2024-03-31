@@ -1,0 +1,1 @@
+Due to implementation, the server only works one at a time, for both to work at the same time, it would need to be implemented the UDP and TDP separately, carefull use

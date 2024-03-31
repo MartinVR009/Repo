@@ -1,0 +1,12 @@
+--Trigger de rating 1-5
+CREATE OR REPLACE TRIGGER TR_CHECK_RATING_RATINGR
+BEFORE INSERT ON Rating
+FOR EACH ROW
+BEGIN
+    IF :NEW.rating < 1 OR :NEW.rating > 5 THEN
+        RAISE_APPLICATION_ERROR(-1, 'El valor de "rating" debe estar entre 1 y 5.');
+    END IF;
+END;
+/
+
+UPDATE RATING SET RATING = 4 WHERE MOVIE_ID = 1196 AND USERID = 139030

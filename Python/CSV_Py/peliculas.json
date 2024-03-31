@@ -1,0 +1,708 @@
+[
+  {
+    "Movie_Id": "168162",
+    "nameMovie": "A Perry Mason Mystery: The Case of the Jealous Jokester (1995)",
+    "guionistas": "Erle Stanley Gardner| Gerry Conway",
+    "directores": "Vincent McEveety",
+    "actores": "Barbara Hale| William R. Moses| Tony Roberts| Hal Holbrook"
+  },
+  {
+    "Movie_Id": "130860",
+    "nameMovie": "Monaco Forever (1984)",
+    "guionistas": "C. William Pitt",
+    "directores": "William A. Levey",
+    "actores": "Daniele Romer| Jean-Claude Van Damme| Nancy Brock| Charles Pitt"
+  },
+  {
+    "Movie_Id": "111815",
+    "nameMovie": "Once Upon a Time in Shanghai (2014)",
+    "guionistas": "Jing Wong",
+    "directores": "Ching-Po Wong",
+    "actores": "Andy On| Luxia Jiang| Philip Ng| Sammo Kam-Bo Hung"
+  },
+  {
+    "Movie_Id": "71341",
+    "nameMovie": "Blood Creek (a.k.a. Town Creek) (2009)",
+    "guionistas": "David Kajganich",
+    "directores": "Joel Schumacher",
+    "actores": "Dominic Purcell| Emma Booth| Henry Cavill| Michael Fassbender"
+  },
+  {
+    "Movie_Id": "153574",
+    "nameMovie": "Julietta (2001)",
+    "guionistas": "Jochen Bitzer| Chris Martin Silber",
+    "directores": "Christoph Stark",
+    "actores": "Barnaby Metschurat| Matthias Koeberlin| Sibylle Canonica| Lavinia Wilson"
+  },
+  {
+    "Movie_Id": "2351",
+    "nameMovie": "Nights of Cabiria (Notti di Cabiria| Le) (1957)",
+    "guionistas": "Pier Paolo Pasolini| Tullio Pinelli| Brunello Rondi| Ennio Flaiano",
+    "subjects": "Films_set_in_Rome|Italian_drama_films|1957_drama_films|1957_films|Films_scored_by_Nino_Rota|Italian-language_films|Italian_black-and-white_films|Italian_films|Paramount_Pictures_films|Best_Foreign_Language_Film_Academy_Award_winners|Films_about_prostitution_in_Italy|Films_directed_by_Federico_Fellini|Films_produced_by_Dino_De_Laurentiis|Films_with_screenplays_by_Federico_Fellini",
+    "directores": "Federico Fellini",
+    "actores": "Dorian_Gray_(actress)|François_Périer|Giulietta_Masina|Amedeo_Nazzari|Franca_Marzi",
+    "generos": "Drama"
+  },
+  {
+    "Movie_Id": "88327",
+    "nameMovie": "New One-Armed Swordsman| The (Xin du bi dao) (1971)",
+    "guionistas": "Kuang Ni",
+    "directores": "Cheh Chang",
+    "actores": "Feng Ku| Lung Ti| Ching Lee| David Chiang"
+  },
+  {
+    "Movie_Id": "82043",
+    "nameMovie": "Little Red Flowers (Kan shang qu hen mei) (2006)",
+    "guionistas": "Dai Ning| Shuo Wang",
+    "directores": "Yuan Zhang",
+    "actores": "Yuanyuan Ning| Bowen Dong| Manyuan Chen| Zhao Rui"
+  },
+  {
+    "Movie_Id": "2988",
+    "nameMovie": "Melvin and Howard (1980)",
+    "guionistas": "Bo Goldman",
+    "subjects": "1980_drama_films|1980_films|Films_based_on_actual_events|Films_featuring_a_Best_Supporting_Actress_Academy_Award-winning_performance|Films_set_in_California|Films_set_in_Utah|Films_set_in_the_1970s|Films_shot_in_California|Films_shot_in_Utah|American_comedy-drama_films|American_films|English-language_films|Universal_Pictures_films|1980_comedy-drama_films|1980_comedy_films|Films_directed_by_Jonathan_Demme|Films_featuring_a_Best_Supporting_Actress_Golden_Globe-winning_performance|Films_produced_by_Art_Linson|Films_scored_by_Bruce_Langhorne|Films_set_in_Nevada|Films_shot_in_Nevada|Films_whose_writer_won_the_Best_Original_Screenplay_Academy_Award|Films_with_screenplays_by_Bo_Goldman|National_Society_of_Film_Critics_Award_for_Best_Film_winners|Cultural_depictions_of_Howard_Hughes",
+    "directores": "Jonathan Demme",
+    "actores": "Paul Le Mat| Mary Steenburgen| Elizabeth Cheshire| Jason Robards",
+    "generos": "Drama"
+  },
+  {
+    "Movie_Id": "128001",
+    "nameMovie": "The Green Van (1983)",
+    "guionistas": "Aleksandr Kozachinskiy| Igor Shevtsov",
+    "directores": "Aleksandr Pavlovskiy",
+    "actores": "Aleksandr Demyanenko| Aleksandr Solovyov| Borislav Brondukov| Dmitriy Kharatyan"
+  },
+  {
+    "Movie_Id": "136381",
+    "nameMovie": "Bisturi| la mafia bianca (1973)",
+    "guionistas": "Massimo De Rita| Dino Maiuri",
+    "directores": "Luigi Zampa",
+    "actores": "Senta Berger| Gabriele Ferzetti| Enrico Maria Salerno| Luciano Salce"
+  },
+  {
+    "Movie_Id": "65521",
+    "nameMovie": "Howling V: The Rebirth (1989)",
+    "guionistas": "Freddie Rowe| Clive Turner| Gary Brandner",
+    "directores": "Neal Sundstrom",
+    "actores": "Phil Davis| Victoria Catlin| Elizabeth Shé| Ben Cole"
+  },
+  {
+    "Movie_Id": "164471",
+    "nameMovie": "Revenge (1971)",
+    "guionistas": "John Kruse",
+    "directores": "Sidney Hayers",
+    "actores": "Sinéad Cusack| Ray Barrett| James Booth| Joan Collins"
+  },
+  {
+    "Movie_Id": "59519",
+    "nameMovie": "Reprise (2006)",
+    "guionistas": "Eskil Vogt",
+    "directores": "Joachim Trier",
+    "actores": "Anders Danielsen Lie| Odd-Magnus Williamson| Espen Klouman Høiner| Viktoria Winge"
+  },
+  {
+    "Movie_Id": "122319",
+    "nameMovie": "Ice Soldiers (2013)",
+    "guionistas": "Jonathan Tydor",
+    "directores": "Sturla Gunnarsson",
+    "actores": "Dominic Purcell| Adam Beach| Gabriel Hogan| Michael Ironside"
+  },
+  {
+    "Movie_Id": "120606",
+    "nameMovie": "Zenobia (1939)",
+    "guionistas": "Walter DeLeon| H.C. Bunner| Corey Ford| Norm Blackburn| Arnold Belgard",
+    "directores": "Gordon Douglas",
+    "actores": "Alice Brady| Harry Langdon| Oliver Hardy| Billie Burke"
+  },
+  {
+    "Movie_Id": "5729",
+    "nameMovie": "Endless Love (1981)",
+    "guionistas": "Judith Rascoe| Scott Spencer",
+    "directores": "Franco Zeffirelli",
+    "actores": "Don Murray| Shirley Knight| Brooke Shields| Martin Hewitt"
+  },
+  {
+    "Movie_Id": "127258",
+    "nameMovie": "The Passerby (1982)",
+    "guionistas": "Jacques Kirsner| Joseph Kessel",
+    "directores": "Jacques Rouffio",
+    "actores": "Michel Piccoli| Helmut Griem| Romy Schneider| Dominique Labourier"
+  },
+  {
+    "Movie_Id": "155464",
+    "nameMovie": "Sweet n Short (1991)",
+    "guionistas": "Peet Buys| Daan Smuts| Paul Slabolepszy",
+    "directores": "Gray Hofmeyr",
+    "actores": "Casper de Vries| Alfred Ntombela| Joanna Weinberg| Leon Schuster"
+  },
+  {
+    "Movie_Id": "103982",
+    "nameMovie": "Frankensteins Army (2013)",
+    "guionistas": "Mary Shelley| Chris W. Mitchell| Miguel Tejada-Flores",
+    "directores": "Richard Raaphorst",
+    "actores": "Robert Gwilym| Hon Ping Tang| Alexander Mercury| Luke Newberry"
+  },
+  {
+    "Movie_Id": "138300",
+    "nameMovie": "Welcome to the North (2012)",
+    "guionistas": "Fabio Bonifacci",
+    "directores": "Luca Miniero",
+    "actores": "Alessandro Siani| Valentina Lodovini| Claudio Bisio| Angela Finocchiaro"
+  },
+  {
+    "Movie_Id": "127656",
+    "nameMovie": "Mr. Kinky (1968)",
+    "guionistas": "Ruggero Maccari| Ettore Scola",
+    "directores": "Dino Risi",
+    "actores": "Ann-Margret| Vittorio Gassman| Egidio Casolari| Giuseppe Altamurra"
+  },
+  {
+    "Movie_Id": "7033",
+    "nameMovie": "Secret of My Succe$s| The (a.k.a. The Secret of My Success) (1987)",
+    "guionistas": "Jim Cash| AJ Carothers| Jack Epps Jr.",
+    "directores": "Herbert Ross",
+    "actores": "Margaret Whitton| Helen Slater| Michael J. Fox| Richard Jordan"
+  },
+  {
+    "Movie_Id": "178481",
+    "nameMovie": "Headwinds (2011)",
+    "guionistas": "Olivier Adam| Marion Laine| Marie-Pierre Huster",
+    "directores": "Jalil Lespert",
+    "actores": "Ramzy Bedia| Benoît Magimel| Isabelle Carré| Antoine Duléry"
+  },
+  {
+    "Movie_Id": "98761",
+    "nameMovie": "Shaolin Temple 2: Kids from Shaolin (Shao Lin xiao zi) (Kids from Shaolin) (1984)",
+    "guionistas": "Shu-Hua Ho| Chi-Keung Leung",
+    "directores": "Hsin-Yen Chang",
+    "actores": "Lan Ding| Chunhua Ji| Jet Li| Qiuyan Huang"
+  },
+  {
+    "Movie_Id": "109736",
+    "nameMovie": "Concepción Arenal| la visitadora de cárceles (2012)",
+    "guionistas": "Rafa Russo",
+    "directores": "Laura Mañá",
+    "actores": "Mabel Rivera| Òscar Rabadán| Anna Casas| Blanca Portillo"
+  },
+  {
+    "Movie_Id": "47092",
+    "nameMovie": "On Dangerous Ground (1952)",
+    "guionistas": "A.I. Bezzerides| Gerald Butler",
+    "directores": "Nicholas Ray",
+    "actores": "Robert Ryan| Ida Lupino| Charles Kemper| Ward Bond"
+  },
+  {
+    "Movie_Id": "187477",
+    "nameMovie": "Night Bus (2017)",
+    "guionistas": "Rahabi Mandra",
+    "directores": "Emil Heradi",
+    "actores": "Yayu A.W. Unru| Edward Akbar| T. Rifnu Wikana| Hana Prinantina"
+  },
+  {
+    "Movie_Id": "141156",
+    "nameMovie": "Alibi Ike (1935)",
+    "guionistas": "Ring Lardner| William Wister Haines",
+    "directores": "Ray Enright",
+    "actores": "Ruth Donnelly| Olivia de Havilland| Joe E. Brown| William Frawley| Roscoe Karns"
+  },
+  {
+    "Movie_Id": "96849",
+    "nameMovie": "Sparkle (2012)",
+    "guionistas": "Mara Brock Akil| Howard Rosenman| Joel Schumacher",
+    "directores": "Salim Akil",
+    "actores": "Carmen Ejogo| Derek Luke| Whitney Houston| Jordin Sparks Thomas"
+  },
+  {
+    "Movie_Id": "131590",
+    "nameMovie": "Hamburger: The Motion Picture (1986)",
+    "guionistas": "Donald Ross",
+    "directores": "Mike Marvin",
+    "actores": "Chuck McCann| Randi Brooks| Dick Butkus| Leigh McCloskey"
+  },
+  {
+    "Movie_Id": "86057",
+    "nameMovie": "Outrageous Class (Hababam sinifi) (1975)",
+    "guionistas": "Rifat Ilgaz| Umur Bugay",
+    "directores": "Ertem Egilmez",
+    "actores": "Halit Akçatepe| Kemal Sunal| Münir Özkul| Tarik Akan"
+  },
+  {
+    "Movie_Id": "155908",
+    "nameMovie": "Public Wedding (1937)",
+    "guionistas": "Houston Branch| Roy Chanslor",
+    "directores": "Nick Grinde",
+    "actores": "Jane Wyman| William Hopper| Marie Wilson| Dick Purcell"
+  },
+  {
+    "Movie_Id": "116555",
+    "nameMovie": "The Disembodied (1957)",
+    "guionistas": "Jack Townley",
+    "directores": "Walter Grauman",
+    "actores": "Allison Hayes| Eugenia Paul| Paul Burke| John Wengraf"
+  },
+  {
+    "Movie_Id": "125133",
+    "nameMovie": "Prairie Fever (2008)",
+    "guionistas": "Steven H. Berman",
+    "directores": "David S. Cass Sr.| Stephen Bridgewater",
+    "actores": "Kevin Sorbo| Dominique Swain| Jamie Anne Allman| Lance Henriksen"
+  },
+  {
+    "Movie_Id": "191995",
+    "nameMovie": "Arasatchi (2004)",
+    "guionistas": "Gopal Ram",
+    "directores": "N. Maharajan",
+    "actores": "Raghuvaran| Charan Raj| Lara Dutta| Manivannan"
+  },
+  {
+    "Movie_Id": "116034",
+    "nameMovie": "Children of the Corn: Genesis (2011)",
+    "guionistas": "Stephen King",
+    "directores": "Joel Soisson",
+    "actores": "Kelen Coleman| Diane Peterson| J.J. Banicki| Kai Caster"
+  },
+  {
+    "Movie_Id": "52551",
+    "nameMovie": "Redline (2007)",
+    "guionistas": "Daniel Sadek| Robert Foreman",
+    "directores": "Andy Cheng",
+    "actores": "Angus Macfadyen| Nadia Bjorlin| Nathan Phillips| Eddie Griffin"
+  },
+  {
+    "Movie_Id": "125576",
+    "nameMovie": "The Secret Partner (1961)",
+    "guionistas": "Jack Seddon| David Pursall",
+    "directores": "Basil Dearden",
+    "actores": "Hugh Burden| Stewart Granger| Haya Harareet| Bernard Lee"
+  },
+  {
+    "Movie_Id": "131710",
+    "nameMovie": "The Bermuda Triangle (1996)",
+    "guionistas": "Stephen McPherson| Elizabeth Bradley",
+    "directores": "Ian Toynton",
+    "actores": "David Gallagher| Lisa Jakub| Susanna Thompson| Sam Behrens"
+  },
+  {
+    "Movie_Id": "72927",
+    "nameMovie": "Donkey Xote (2007)",
+    "guionistas": "Angel E. Pariente| Miguel de Cervantes y Saavedra",
+    "directores": "Jose Pozo",
+    "actores": "Andreu Buenafuente| José Luis Gil| David Fernández| Luis Posada"
+  },
+  {
+    "Movie_Id": "103498",
+    "nameMovie": "Double Solitaire (1974)",
+    "guionistas": "Robert Anderson",
+    "directores": "Paul Bogart",
+    "actores": "Norman Foster| Richard Crenna| Nicholas Hammond| Susan Clark| Harold Gould| Norma Crane"
+  },
+  {
+    "Movie_Id": "130982",
+    "nameMovie": "Widows (2011)",
+    "guionistas": "Bernarda Pagés",
+    "directores": "Marcos Carnevale",
+    "actores": "Valeria Bertuccelli| Graciela Borges| Martín Bossi| Rita Cortese"
+  },
+  {
+    "Movie_Id": "4549",
+    "nameMovie": "Sweet Hearts Dance (1988)",
+    "guionistas": "Ernest Thompson",
+    "directores": "Robert Greenwald",
+    "actores": "Don Johnson| Jeff Daniels| Susan Sarandon| Elizabeth Perkins"
+  },
+  {
+    "Movie_Id": "149564",
+    "nameMovie": "Tom Browns School Days (1940)",
+    "guionistas": "Walter Ferris| Frank Cavett| Thomas Hughes| C. Graham Baker| Gene Towne",
+    "directores": "Robert Stevenson",
+    "actores": "Cedric Hardwicke| Freddie Bartholomew| Josephine Hutchinson| Jimmy Lydon"
+  },
+  {
+    "Movie_Id": "142618",
+    "nameMovie": "Flying Colors (2015)",
+    "guionistas": "Hiroshi Hashimoto| Nobutaka Tsubota",
+    "directores": "Nobuhiro Doi",
+    "actores": "Atsushi Itô| Morio Agata| Kasumi Arimura| Nanami Abe"
+  },
+  {
+    "Movie_Id": "173695",
+    "nameMovie": "Succubus (1968)",
+    "guionistas": "Pier A. Caminnecci",
+    "directores": "Jesús Franco",
+    "actores": "Howard Vernon| Adrian Hoven| Jack Taylor| Janine Reynaud"
+  },
+  {
+    "Movie_Id": "26547",
+    "nameMovie": "Police Story (Ging chaat goo si) (1985)",
+    "guionistas": "Edward Tang",
+    "directores": "Chi-Hwa Chen",
+    "actores": "Brigitte Lin| Yuen Chor| Jackie Chan| Maggie Cheung"
+  },
+  {
+    "Movie_Id": "8667",
+    "nameMovie": "A Home at the End of the World (2004)",
+    "guionistas": "Michael Cunningham",
+    "directores": "Michael Mayer",
+    "actores": "Sissy Spacek| Colin Farrell| Robin Wright| Dallas Roberts"
+  },
+  {
+    "Movie_Id": "112259",
+    "nameMovie": "Norman... Is That You? (1976)",
+    "guionistas": "Sam Bobrick| Ron Clark",
+    "directores": "George Schlatter",
+    "actores": "Pearl Bailey| Michael Warren| Redd Foxx| Dennis Dugan"
+  },
+  {
+    "Movie_Id": "3287",
+    "nameMovie": "Tigger Movie| The (2000)",
+    "guionistas": "A.A. Milne| Eddie Guzelian",
+    "subjects": "Musicals_by_the_Sherman_Brothers|Winnie-the-Pooh_films|Winnie_the_Pooh_(franchise)|2000_directorial_debut_films|2000s_American_animated_films|American_buddy_films|American_children\u0027s_animated_adventure_films|American_children\u0027s_animated_comedy_films|American_children\u0027s_animated_drama_films|American_children\u0027s_animated_musical_films|American_musical_comedy-drama_films|American_sequel_films|Animated_feature_films|Animated_films_about_friendship|Children\u0027s_comedy-drama_films|DisneyToon_Studios_animated_films|Disney_Television_Animation_films|Films_with_live_action_and_animation|Walt_Disney_Pictures_films|2000_films|American_films|Comedy_film_soundtracks|American_adventure_comedy-drama_films|Animated_buddy_films|Animated_films_about_animals|Walt_Disney_Records_soundtracks|Films_scored_by_Harry_Gregson-Williams|Drama_film_soundtracks|2000_animated_films|2000s_adventure_comedy-drama_films|2000s_musical_comedy-drama_films|Musical_film_soundtracks",
+    "directores": "Jun Falkenstein",
+    "actores": "Ken_Sansom|Peter_Cullen|John_Fiedler|Andre_Stojka|Jim_Cummings|Kath_Soucie|John_Hurt|Tom_Attenborough|Nikita_Hopkins",
+    "generos": "Animation|Children"
+  },
+  {
+    "Movie_Id": "118914",
+    "nameMovie": "The Curse of King Tuts Tomb (2006)",
+    "guionistas": "David N. Titcher",
+    "directores": "Russell Mulcahy",
+    "actores": "Steven Waddington| Leonor Varela| Casper Van Dien| Jonathan Hyde"
+  },
+  {
+    "Movie_Id": "47501",
+    "nameMovie": "Tolable David (1921)",
+    "guionistas": "Joseph Hergesheimer| Edmund Goulding",
+    "directores": "Henry King",
+    "actores": "Gladys Hulette| Walter P. Lewis| Richard Barthelmess| Ernest Torrence"
+  },
+  {
+    "Movie_Id": "157164",
+    "nameMovie": "The Priests Children (2013)",
+    "guionistas": "Mate Matisic",
+    "directores": "Vinko Bresan",
+    "actores": "Drazen Kuhn| Marija Skaricic| Kresimir Mikic| Niksa Butijer"
+  },
+  {
+    "Movie_Id": "37824",
+    "nameMovie": "Born to Fight (Kerd ma lui) (2004)",
+    "guionistas": "Morakat Kaewthanek| Thanapat Taweesuk| Nontakorn Taweesuk",
+    "directores": "Panna Rittikrai",
+    "actores": "Nappon Gomarachun| Dan Chupong| Piyapong Piew-on| Santisuk Promsiri"
+  },
+  {
+    "Movie_Id": "153700",
+    "nameMovie": "Tussenland (2002)",
+    "guionistas": "Helena van der Meulen",
+    "directores": "Eugenie Jansen",
+    "actores": "Jan Munter| John Kon Kelei| Willem Smit| Ingeborg Uyt den Boogaard"
+  },
+  {
+    "Movie_Id": "6177",
+    "nameMovie": "Murphys Law (1986)",
+    "guionistas": "Gail Morgan Hickman",
+    "directores": "J. Lee Thompson",
+    "actores": "Robert F. Lyons| Kathleen Wilhoite| Carrie Snodgress| Charles Bronson"
+  },
+  {
+    "Movie_Id": "165719",
+    "nameMovie": "Luokkakokous 2: Polttarit (2016)",
+    "guionistas": "Lars Mering| Claudia Boderke",
+    "directores": "Taneli Mustonen",
+    "actores": "Jaajo Linnonmaa| Sami Hedberg| Aku Hirviniemi| Helena Vierikko"
+  },
+  {
+    "Movie_Id": "168208",
+    "nameMovie": "Карусель (1970)",
+    "guionistas": "Anton Chekhov",
+    "directores": "Mikhail Shvejtser",
+    "actores": "Vladimir Basov| Ivan Lapikov| Evgeniy Leonov| Natalya Vorobyova"
+  },
+  {
+    "Movie_Id": "51617",
+    "nameMovie": "Unfaithfully Yours (1984)",
+    "guionistas": "Barry Levinson| Valerie Curtin| Robert Klane| Preston Sturges",
+    "directores": "Howard Zieff",
+    "actores": "Nastassja Kinski| Armand Assante| Albert Brooks| Dudley Moore"
+  },
+  {
+    "Movie_Id": "133453",
+    "nameMovie": "In the shadow of the eagles (1966)",
+    "guionistas": "Nino Milano",
+    "directores": "Ferdinando Baldi",
+    "actores": "Beba Loncar| Cameron Mitchell| Dieter Eppler| Gabriella Pallotta"
+  },
+  {
+    "Movie_Id": "46372",
+    "nameMovie": "Bribe| The (1949)",
+    "guionistas": "Frederick Nebel| Marguerite Roberts",
+    "directores": "Vincente Minnelli| Robert Z. Leonard",
+    "actores": "Charles Laughton| Vincent Price| Robert Taylor| Ava Gardner"
+  },
+  {
+    "Movie_Id": "97042",
+    "nameMovie": "Ishaqzaade (2012)",
+    "guionistas": "Aditya Chopra",
+    "directores": "Habib Faisal",
+    "actores": "Arjun Kapoor| Anil Rastogi| Gauahar Khan| Parineeti Chopra"
+  },
+  {
+    "Movie_Id": "132608",
+    "nameMovie": "Barbecue (2014)",
+    "guionistas": "Héctor Cabello Reyes",
+    "directores": "Eric Lavaine",
+    "actores": "Florence Foresti| Guillaume de Tonquédec| Lambert Wilson| Franck Dubosc"
+  },
+  {
+    "Movie_Id": "7323",
+    "nameMovie": "Good bye| Lenin! (2003)",
+    "guionistas": "Chris Martin Silber| Henk Handloegten| Achim von Borries| Bernd Lichtenberg",
+    "directores": "Wolfgang Becker",
+    "actores": "Florian Lukas| Katrin Saß| Daniel Brühl| Chulpan Khamatova"
+  },
+  {
+    "Movie_Id": "83134",
+    "nameMovie": "Tucker \u0026 Dale vs Evil (2010)",
+    "guionistas": "Morgan Jurgenson",
+    "directores": "Eli Craig",
+    "actores": "Tyler Labine| Jesse Moss| Katrina Bowden| Alan Tudyk"
+  },
+  {
+    "Movie_Id": "106753",
+    "nameMovie": "Shed No Tears (Känn ingen sorg) (2013)",
+    "guionistas": "Moa Gammel| Cilla Jackert",
+    "directores": "Björn Stein| Måns Mårlind",
+    "actores": "Reine Brynolfsson| Marie Richardson| Josefin Neldén| Adam Lundgren"
+  },
+  {
+    "Movie_Id": "102744",
+    "nameMovie": "Night at the Crossroads (La nuit du carrefour) (1932)",
+    "guionistas": "Georges Simenon",
+    "directores": "Jean Renoir",
+    "actores": "Winna Winifried| Georges Térof| Pierre Renoir| Georges Koudria"
+  },
+  {
+    "Movie_Id": "77846",
+    "nameMovie": "12 Angry Men (1997)",
+    "guionistas": "Reginald Rose",
+    "directores": "William Friedkin",
+    "actores": "Jack Lemmon| George C. Scott| Hume Cronyn| Ossie Davis"
+  },
+  {
+    "Movie_Id": "131892",
+    "nameMovie": "Beach Balls (1988)",
+    "guionistas": "David Rocklin",
+    "directores": "Joe Ritter",
+    "actores": "Heidi Helmer| Amanda Goodwin| Steven Tash| Phillip Paley"
+  },
+  {
+    "Movie_Id": "137024",
+    "nameMovie": "The Perfect Nanny (2000)",
+    "guionistas": "Mark Castaldo| Christine Conradt| Richard Gilbert-Hill| Victor Schiller",
+    "directores": "Robert Malenfant",
+    "actores": "Scott Terra| Bruce Boxleitner| Dana Barron| Tracy Nelson"
+  },
+  {
+    "Movie_Id": "8045",
+    "nameMovie": "Hamburger Hill (1987)",
+    "guionistas": "James Carabatsos",
+    "directores": "John Irvin",
+    "actores": "Michael Dolan| Michael Boatman| Anthony Barrile| Don Cheadle"
+  },
+  {
+    "Movie_Id": "184033",
+    "nameMovie": "Why Me? (2015)",
+    "guionistas": "Loredana Novak",
+    "directores": "Tudor Giurgiu",
+    "actores": "Andreea Vasile| Emilian Oprea| Mihai Constantin| Dan Condurache"
+  },
+  {
+    "Movie_Id": "78057",
+    "nameMovie": "Adventures of Tarzan (1921)",
+    "guionistas": "Edgar Rice Burroughs| Bert Ennis| Lillian Valentine",
+    "directores": "Robert F. Hill| Scott Sidney",
+    "actores": "Frank Whitson| Scott Pembroke| Louise Lorraine| Elmo Lincoln"
+  },
+  {
+    "Movie_Id": "122733",
+    "nameMovie": "Mosquito Squadron (1969)",
+    "guionistas": "Donald S. Sanford| Joyce Perry",
+    "directores": "Boris Sagal",
+    "actores": "Suzanne Neve| David McCallum| Charles Gray| David Buck"
+  },
+  {
+    "Movie_Id": "156264",
+    "nameMovie": "The Notorious Lone Wolf (1946)",
+    "guionistas": "Edward Dein| Louis Joseph Vance| Martin Berkeley| William Bowers| Garrett Graham",
+    "directores": "D. Ross Lederman",
+    "actores": "Gerald Mohr| John Abbott| Eric Blore| Janis Carter"
+  },
+  {
+    "Movie_Id": "167302",
+    "nameMovie": "Dont let Alberto fall into temptation (2014)",
+    "guionistas": "Leonardo De Leon",
+    "directores": "Joe Menendez",
+    "actores": "Valentino Lanus| Vladimir Acevedo| Jon Molerio| Sandra Echeverría"
+  },
+  {
+    "Movie_Id": "155098",
+    "nameMovie": "Pizza II: Villa (2013)",
+    "guionistas": "Manikandan",
+    "directores": "Deepan Chakravarthy",
+    "actores": "Nassar| Ashok Selvan| Jayakumar| Sanchita Shetty"
+  },
+  {
+    "Movie_Id": "105936",
+    "nameMovie": "Space Amoeba (Yog: Monster from Space) (1970)",
+    "guionistas": "Ei Ogawa",
+    "directores": "Ishirô Honda",
+    "actores": "Kenji Sahara| Akira Kubo| Atsuko Takahashi| Yukiko Kobayashi"
+  },
+  {
+    "Movie_Id": "4447",
+    "nameMovie": "Legally Blonde (2001)",
+    "guionistas": "Amanda Brown| Kirsten Smith| Karen McCullah",
+    "directores": "Robert Luketic",
+    "actores": "Matthew Davis| Selma Blair| Reese Witherspoon| Luke Wilson"
+  },
+  {
+    "Movie_Id": "171309",
+    "nameMovie": "Killing Reagan (2016)",
+    "guionistas": "\"Martin Dugard| \"\"Bill OReilly\"\"| Eric Simonson\"",
+    "directores": "Rod Lurie",
+    "actores": "Joel Murray| Patrick St. Esprit| Cynthia Nixon| Tim Matheson"
+  },
+  {
+    "Movie_Id": "95588",
+    "nameMovie": "Balto: Wolf Quest (2002)",
+    "guionistas": "Dev Ross| Elana Lesser| Cliff Ruby",
+    "directores": "Phil Weinstein",
+    "actores": "Mark Hamill| Lacey Chabert| David Carradine| Jodi Benson"
+  },
+  {
+    "Movie_Id": "152354",
+    "nameMovie": "Deewangee (2002)",
+    "guionistas": "Neeraj Pathak",
+    "directores": "Anees Bazmee",
+    "actores": "Farida Jalal| Akshaye Khanna| Ajay Devgn| Urmila Matondkar"
+  },
+  {
+    "Movie_Id": "80288",
+    "nameMovie": "Street with No Name| The (1948)",
+    "guionistas": "Harry Kleiner| Samuel G. Engel",
+    "directores": "William Keighley",
+    "actores": "Richard Widmark| Mark Stevens| Lloyd Nolan| Barbara Lawrence"
+  },
+  {
+    "Movie_Id": "69971",
+    "nameMovie": "Ludwig (1972)",
+    "guionistas": "\"Enrico Medioli| \"\"Suso Cecchi DAmico\"\"\"",
+    "directores": "Luchino Visconti",
+    "actores": "Helmut Berger| Silvana Mangano| Trevor Howard| Romy Schneider"
+  },
+  {
+    "Movie_Id": "7311",
+    "nameMovie": "Goodbye| Mr. Chips (1939)",
+    "guionistas": "R.C. Sherriff| Eric Maschwitz| Claudine West| James Hilton",
+    "directores": "Sam Wood| Sidney Franklin",
+    "actores": "John Mills| Robert Donat| Greer Garson| Terry Kilburn"
+  },
+  {
+    "Movie_Id": "87843",
+    "nameMovie": "Broken Windows (2008)",
+    "guionistas": "Thomas J. Rasera",
+    "directores": "Tony Hickman",
+    "actores": "Larisa Oleynik| Jennifer Hall| Sara Jane Nash| Sarah Thompson"
+  },
+  {
+    "Movie_Id": "7414",
+    "nameMovie": "Going in Style (1979)",
+    "guionistas": "Edward Cannon",
+    "directores": "Martin Brest",
+    "actores": "Charles Hallahan| Lee Strasberg| Art Carney| George Burns"
+  },
+  {
+    "Movie_Id": "124472",
+    "nameMovie": "Red Light (1949)",
+    "guionistas": "\"\"\"Don Red Barry\"\"| George Callahan| Charles Grayson\"",
+    "directores": "Roy Del Ruth",
+    "actores": "Gene Lockhart| Virginia Mayo| Raymond Burr| George Raft"
+  },
+  {
+    "Movie_Id": "165947",
+    "nameMovie": "The True Memoirs of an International Assassin (2016)",
+    "guionistas": "Jeff Morris",
+    "directores": "Jeff Wadlow",
+    "actores": "Maurice Compte| Kim Coates| Zulay Henao| Kevin James"
+  },
+  {
+    "Movie_Id": "178641",
+    "nameMovie": "Chasing the Dragon (2017)",
+    "guionistas": "Koon-Nam Lui| Ming-Ho Yip",
+    "directores": "Jason Kwan| Jing Wong| Aman Chang",
+    "actores": "Philip Keung| Wilfred Lau| Andy Lau| Donnie Yen"
+  },
+  {
+    "Movie_Id": "191071",
+    "nameMovie": "Baba (2002)",
+    "guionistas": "Gopu-Babu| Balakumaran| Sri Ramakrishna",
+    "directores": "Suresh Krishna",
+    "actores": "Goundamani| Manisha Koirala| M.N. Nambiar| Rajinikanth"
+  },
+  {
+    "Movie_Id": "135667",
+    "nameMovie": "People of Rome (2003)",
+    "guionistas": "Paola Scola| Silvia Scola",
+    "directores": "Ettore Scola",
+    "actores": "Fiorenzo Fiorentini| Antonello Fassari| Giorgio Colangeli| Fabio Ferrari"
+  },
+  {
+    "Movie_Id": "170725",
+    "nameMovie": "Johanneksen leipäpuu (1994)",
+    "guionistas": "Martti Joenpolvi| Juha Lehtola",
+    "directores": "Matti Ijäs",
+    "actores": "Pekka Huotari| Sulevi Peltola| Liisa Lehtimaja| Tarja Siimes"
+  },
+  {
+    "Movie_Id": "7167",
+    "nameMovie": "Japanese Story (2003)",
+    "guionistas": "Alison Tilson",
+    "directores": "Sue Brooks",
+    "actores": "Matthew Dyktynski| Toni Collette| Lynette Curran| Gotaro Tsunashima"
+  },
+  {
+    "Movie_Id": "113254",
+    "nameMovie": "Zarafa (2012)",
+    "guionistas": "Alexander Abela",
+    "directores": "Muhammad Omar Faruk| Rémi Bezançon| Jean-Christophe Lie",
+    "actores": "Max Renaudin Pratt| Simon Abkarian| Abraham Adesoye| Sjaak Caderyn"
+  },
+  {
+    "Movie_Id": "101112",
+    "nameMovie": "Oz the Great and Powerful (2013)",
+    "guionistas": "David Lindsay-Abaire| Mitchell Kapner| L. Frank Baum",
+    "directores": "Sam Raimi",
+    "actores": "Mila Kunis| Rachel Weisz| Michelle Williams| James Franco"
+  },
+  {
+    "Movie_Id": "110223",
+    "nameMovie": "Prisoner of Zenda| The (1979)",
+    "guionistas": "Dick Clement| Edward E. Rose| Ian La Frenais| Anthony Hope",
+    "directores": "Richard Quine",
+    "actores": "Lynne Frederick| Lionel Jeffries| Elke Sommer| Peter Sellers"
+  },
+  {
+    "Movie_Id": "96304",
+    "nameMovie": "Hara-Kiri: Death of a Samurai (2011)",
+    "guionistas": "Yasuhiko Takiguchi| Kikumi Yamagishi",
+    "directores": "Takashi Miike",
+    "actores": "Munetaka Aoki| Hikari Mitsushima| Naoto Takenaka| Kôji Yakusho"
+  },
+  {
+    "Movie_Id": "4195",
+    "nameMovie": "Abominable Dr. Phibes| The (1971)",
+    "guionistas": "William Goldstein| James Whiton",
+    "directores": "Robert Fuest",
+    "actores": "Terry-Thomas| Virginia North| Vincent Price| Joseph Cotten"
+  }
+]

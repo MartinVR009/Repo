@@ -1,0 +1,49 @@
+body {
+    font-family: Roboto, sans-serif;
+}
+
+header {
+    text-align: center;
+    padding: 10px;
+    background-color: #929292;
+}
+
+header img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+section {
+    margin: 20px;
+}
+
+.project {
+    width: 200px; /* Square dimensions */
+    height: 200px;
+    border: 1px solid #000000;
+    margin: 10px;
+    display: inline-block; /* Aligns the containers side by side */
+    text-align: center;
+    line-height: 200px; /* Vertically centers the text */
+}
+
+#bio_text{
+    color: #d1f6f0;
+}
+
+h1, h2 {
+    color: #f6f6f6;
+}
+
+#bio, #work {
+    background-color: #000000;
+    padding: 15px;
+}
+
+footer {
+    background-color: #11e8c8;
+    text-align: center;
+    padding: 10px;
+}

@@ -1,0 +1,44 @@
+form {
+    margin: 20px auto;
+    padding: auto;
+}
+
+div{
+    flex : 1;
+}
+
+.left_container > div, .right_container > div {
+    align-self: center;
+    margin: 20px;
+    padding: 20px;
+    background-color: aquamarine;
+}
+
+.left_container{
+    background-color: rgb(72, 129, 114);
+    max-width: 300px;
+    height: 350px;
+    padding: 10px;
+    margin: 20px 15px;
+    border: 1px solid black;
+}
+
+.right_container{
+    background-color: rgb(72, 129, 114);
+    width: auto;
+    height: fit-content;
+    padding: 20px;
+    margin: 20px 15px;
+    border: 1px solid black;
+}
+
+body {
+    background-image: linear-gradient(to top, rgba(72, 5, 255, 0.2), rgba(3, 194, 25, 0.2));
+    background-size: 120% 120%;
+}
+
+
+.container{
+    display: flex;
+}
+

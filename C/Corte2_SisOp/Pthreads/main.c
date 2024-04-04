@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <pthread>
+#include <pthread.h>
 #include <unistd.h>
 
 #define  RUNTIME_SECONDS 5

@@ -5,56 +5,59 @@
 #include <unistd.h>
 
 int main() {
-  int fd1[2], fd2[2];
-  char input_str00[100], input_str01[100];
-  pid_t p;
+  int fd1[2], fd2[2]; // Definición de dos tuberías
+  char input_str00[100], input_str01[100]; // Variables para almacenar las frases ingresadas por el usuario
+  pid_t p; // Variable para almacenar el ID del proceso
 
-  printf("Ingrese primera frase (enter para continuar)\n");
+  // Solicitar al usuario que ingrese dos frases
+  printf("Ingrese primera frase (presione enter para continuar)\n");
   scanf("%s", input_str00);
-  printf("Ingrese segunda frase (enter para continuar)\n");
+  printf("Ingrese segunda frase (presione enter para continuar)\n");
   scanf("%s", input_str01);
 
+  // Crear dos tuberías
   if ((pipe(fd1) == -1) || (pipe(fd2) == -1)) {
     fprintf(stderr, "Pipe Failed\n");
     return 1;
   }
-  p = fork();
+  p = fork(); // Crear un nuevo proceso hijo
 
-  if (p < 0) {
+  if (p < 0) { // Si el fork falla
     fprintf(stderr, "fork Failed\n");
     return 1;
   }
 
   // Proceso del padre
-
   else if (p > 0) {
-    char concat_str[100];
-    close(fd1[0]);
-    write(fd1[1], input_str01, strlen(input_str01) + 1);
-    close(fd1[1]);
-    wait(NULL);
-    close(fd2[1]);
-    read(fd2[0], concat_str, 100);
-    printf("String concatenado: %s\n", concat_str);
-    close(fd2[0]);
-  }// Proceso del hijo
-  else {
-    close(fd1[1]);
-    char concat_str[100];
-    read(fd1[0], concat_str, 100);
+    char concat_str[100]; // Variable para almacenar la frase concatenada
+    close(fd1[0]); // Cerrar el extremo de lectura de la primera tubería
+    write(fd1[1], input_str01, strlen(input_str01) + 1); // Escribir la segunda frase en la primera tubería
+    close(fd1[1]); // Cerrar el extremo de escritura de la primera tubería
+    wait(NULL); // Esperar a que el proceso hijo termine
+    close(fd2[1]); // Cerrar el extremo de escritura de la segunda tubería
+    read(fd2[0], concat_str, 100); // Leer la frase concatenada desde la segunda tubería
+    printf("String concatenado: %s\n", concat_str); // Imprimir la frase concatenada
+    close(fd2[0]); // Cerrar el extremo de lectura de la segunda tubería
+  }
 
-    int k = strlen(concat_str), i;
+  // Proceso del hijo
+  else {
+    close(fd1[1]); // Cerrar el extremo de escritura de la primera tubería
+    char concat_str[100]; // Variable para almacenar la frase concatenada
+    read(fd1[0], concat_str, 100); // Leer la segunda frase desde la primera tubería
+
+    int k = strlen(concat_str), i; // Obtener la longitud de la cadena concatenada
     for (i = 0; i < strlen(input_str00); i++) {
-      concat_str[k++] = input_str00[i];
+      concat_str[k++] = input_str00[i]; // Concatenar la primera frase a la segunda frase
     }
 
-    concat_str[k] = '\0';
-    close(fd1[0]);
-    close(fd2[0]);
-    write(fd2[1], concat_str, strlen(concat_str) + 1);
-    close(fd2[1]);
+    concat_str[k] = '\0'; // Agregar el carácter nulo al final de la cadena concatenada
+    close(fd1[0]); // Cerrar el extremo de lectura de la primera tubería
+    close(fd2[0]); // Cerrar el extremo de lectura de la segunda tubería
+    write(fd2[1], concat_str, strlen(concat_str) + 1); // Escribir la cadena concatenada en la segunda tubería
+    close(fd2[1]); // Cerrar el extremo de escritura de la segunda tubería
 
-    exit(0);
+    exit(0); // Salir del proceso hijo
   }
-  return 0;
+  return 0; // Terminar el programa con éxito
 }

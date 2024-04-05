@@ -67,21 +67,21 @@ void imprimirMatriz(int SZ, double *ptr) {
 }
 
 
-void *multiplicarMatrices(int SZ, double *ptrMA, double *ptrMB, double *ptrMC) {
-  double sumaTemp, *pA, *pB, *pC;
+  void *multiplicarMatrices(void *argMM){
+    double sumaTemp, *pA, *pB, *pC;
 
-  for (int i = 0; i < SZ; i++) { // Itera sobre las filas 
-    for (int j = 0; j < SZ; j++) { // Itera sobre las columnas 
-        sumaTemp = 0.0; // reinicia la sumaTemp a 0
-        pA = ptrMA + i * SZ; // Apunta al inicio de la matriz A
-        pB = ptrMB + j; // Apunta a la columna j de la matriz B
-        for (int k = 0; k < SZ; k++, pA++, pB += SZ) { // Itera de uno a uno los elementos de A y de modo columna los elementos de la matriz B
-            sumaTemp += *pA * *pB; // Multiplica los elementos correspondientes y suma el resultado a la variable temporal
-        }
-        ptrMC[j + i * SZ] = sumaTemp; // Almacena el resultado en la matriz de resultado C en la posición (i, j)
-    }
+    for (int i = 0; i < SZ; i++) { // Itera sobre las filas 
+      for (int j = 0; j < SZ; j++) { // Itera sobre las columnas 
+          sumaTemp = 0.0; // reinicia la sumaTemp a 0
+          pA = ptrMA + i * SZ; // Apunta al inicio de la matriz A
+          pB = ptrMB + j; // Apunta a la columna j de la matriz B
+          for (int k = 0; k < SZ; k++, pA++, pB += SZ) { // Itera de uno a uno los elementos de A y de modo columna los elementos de la matriz B
+              sumaTemp += *pA * *pB; // Multiplica los elementos correspondientes y suma el resultado a la variable temporal
+          }
+          ptrMC[j + i * SZ] = sumaTemp; // Almacena el resultado en la matriz de resultado C en la posición (i, j)
+      }
+  }
 }
-
 
 int main(int argc, char *argv[]) {
 

@@ -1,0 +1,90 @@
+1. Insertar
+//Se da por hecho que la cadena de puntos y rayas bajas es una cola de cadena de caracteres o una deque
+//Cuando paso la raiz, no se pasa el nodo actual, siempre un referente a la raiz del arbol 
+Insertar(raiz, simbolo, cadena)
+    si nodo actual es diferente de la raíz y cola de cadena está vacía
+        nodo actual->valor = simbolo
+
+    si simbolo es igual a "." 
+        si nodo actual->izquierdo es nulo 
+            sacar primer elemento de la cola
+            nodo actual->izquierdo = Insertar(nuevo Nodo con simbolo, cadena)
+
+    si simbolo es igual a "-" 
+        si nodo actual->derecho es nulo 
+            sacar primer elemento de la cola
+            nodo actual->derecho = Insertar(nuevo Nodo con simbolo, cadena)
+
+
+2.Codificar
+//Conjunto representa el conjunto de cadena de caracteres
+//Codigo seria un vector de cadenas de caracteres para almacenar sus codificaciones
+
+Codificar(conjunto, codigo)
+    para cada letra en conjunto
+        vector de cadenas de caracteres temporal llamado temporal
+        vector de cadenas de caracteres temporal llamado verificacion
+        dfs(nodo_actual,temporal, letra, verificacion)
+        si verificacion es diferente de vacio 
+            agregar a la cola de codigo verificacion
+            verificacion igual a "" 
+        si no
+            salir
+
+//Nodo representa donde estoy actualmente en el arbol
+//objetivo representa que buscare en el arbol
+//resultado donde guardare la ruta al objetivo de cadena de caracteres
+dfs(Nodo, objetivo, resultado)
+    si mi Nodo esta apuntando a vacio
+        retornar ""
+    
+    si valor nodo actual = objetivo
+        retornar resultado
+
+    cadena de caracteres codificacionIzquierda
+    cadena de caracteres codificacionDerecha
+
+    codificacionIzquierda igual a dfs(nodo izquierdo,objetivo,  concatenar "." a resultado)
+    codificacionDerecha igual a dfs(nodo derecho,objetivo,  concatenar "-" a resultado)
+
+    si codificacionIzquierda es diferente de vacio ""
+        retornar codificacionIzquierda
+    o si codificacionDerecha es diferente de vacio ""
+        retornar codificacionDerecha
+    
+    retornar vacio en caso de no encontrar nada
+
+    
+//Se espera los codigos de la palabra en morse vengan separados por un " " espacio en blanco
+
+3. Decodificar. 
+
+Decodificar(codigos)
+    crear cadena de caracteres vacia llamada palabra
+    crear caracter vacio llamado temporal
+    para cada codigo en codigos
+
+        temporal igual a letra_codigo(codigo)
+        si temporal es diferente de vacio ""
+            concatenar temporal al final de palabra
+        si no
+            retornar vacio
+
+letra_codigo(nodo, &codigo)
+    crear apuntador que apunte a la primera direccion de memoria de codigo llamado ptr 
+        si el caracter al que apunta ptr es igual a "." y nodo izquierdo es diferente de nulo
+
+            si ptr mas uno es diferente de "/0"
+                letra_codigo(nodo izquierdo, ptr mas uno)
+            si no
+                retornar valor nodo izquierdo
+
+        si el caracter al que apunta ptr es igual a "-" y nodo derecho es diferente de nulo
+            si ptr mas uno es diferente de "/0"
+                letra_codigo(nodo derecho, ptr mas uno)
+            si no
+                retornar valor nodo derecho
+        si no
+            retornar vacio
+
+

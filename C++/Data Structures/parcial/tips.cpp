@@ -15,7 +15,6 @@ void dfs(TreeNode *root, std::vector<TreeNode*> &path) {
     if (root == nullptr) {
         return;
     } else {
-        std::cout << root->value << std::endl;
         path.push_back(root);
         dfs(root->left, path);
         dfs(root->right, path);
@@ -24,19 +23,52 @@ void dfs(TreeNode *root, std::vector<TreeNode*> &path) {
 }
 
 // Algoritmo DFS para buscar todas las rutas hacia el target en el árbol
-void lookDfs(TreeNode *root, std::vector<TreeNode*> &path, int target, std::vector<std::vector<TreeNode*>> &result) {
+void lookDfs(TreeNode *root, std::vector<int> &path, int target) {
     if (root == nullptr) {
         return;
     } else {
-        path.push_back(root);
+        path.push_back(root->value);
         if (root->value == target) {
-            result.push_back(path);
+            return path;    
         }
         lookDfs(root->left, path, target, result);
         lookDfs(root->right, path, target, result);
         path.pop_back();
     }
 }
+
+// Algoritmo DFS para buscar todas las rutas hacia el target en el árbol
+void lookAllDfs(TreeNode *root, std::vector<TreeNode*> &path, int target, std::vector<std::vector<TreeNode*>> &result) {
+    if (root == nullptr) {
+        return;
+    } else {
+        path.push_back(root-);
+        if (root->value == target) {
+            result.push_back(path);
+        }
+        lookAllDfs(root->left, path, target, result);
+        looAllkDfs(root->right, path, target, result);
+        path.pop_back();
+    }
+}
+
+// Algoritmo DFS para buscar todos los valores hacia el target en el árbol
+void lookAllDfs(TreeNode *root, std::vector<int> &path, int target, std::vector<std::vector<int>> &result) {
+    if (root == nullptr) {
+        return;
+    } else {
+        path.push_back(root->value);
+        if (root->value == target) {
+            result.push_back(path);
+        }
+        lookAllDfs(root->left, path, target, result);
+        looAllkDfs(root->right, path, target, result);
+        path.pop_back();
+    }
+}
+
+
+
 
 /*
 To implement DFS traversal, you need to take the following stages.

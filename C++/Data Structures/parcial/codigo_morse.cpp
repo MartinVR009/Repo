@@ -16,22 +16,23 @@ Insertar(raiz, simbolo, cadena)
             nodo actual->derecho = Insertar(nuevo Nodo con simbolo, cadena)*/
 
 void Insertar(TreeNodee* raiz, TreeNode* nodo, char simbolo, queue<char> &cadena){
-    if(raiz != this && cadena.isEmpty()){
-        this->valor == simbolo
+    if(raiz != nodo && cadena.isEmpty()){
+        nodo->valor == simbolo
     }
 
     if(simbolo == '.'){
-        if(this->left == nullptr){
+        if(nodo->left == nullptr){
             cadena.pop();
-            this->left = Insertar(raiz, this->left, simbolo, cadena);
+            nodo->left = Insertar(raiz, nodo->left, simbolo, cadena);
         }
     }
-    f(simbolo == '-'){
-        if(this->right == nullptr){
+    else if(simbolo == '-'){
+        if(nodo->right == nullptr){
             cadena.pop();
-            this->right = Insertar(raiz, this->right, simbolo, cadena);
+            nodo->right = Insertar(raiz, nodo->right, simbolo, cadena);
         }
     }
+    return;
 }
 
 
@@ -99,7 +100,6 @@ string dfs(TreeNode* root, char target, string& result) {
 // Función para codificar un conjunto de letras a Morse
 void Codificar(const string& conjunto, vector<string>& codigo, TreeNode* root) {
     for (char letra : conjunto) {
-        string temp;
         string verificacion;
         string resultado;
         verificacion = dfs(root, letra, resultado);
@@ -128,19 +128,6 @@ Decodificar(codigos)
             retornar vacio*/
 
 // Función para decodificar un conjunto de códigos Morse a letras
-string Decodificar(const vector<string>& codigos, TreeNode* root) {
-    string palabra;
-    for (const auto& codigo : codigos) {
-        int idx = 0;
-        char letra = dfs(root, codigo, idx);
-        if (letra != ' ') {
-            palabra += letra;
-        } else {
-            return ""; // No se pudo decodificar el código, retornar vacío
-        }
-    }
-    return palabra;
-}
 
 /*letra_codigo(nodo, &codigo)
     crear apuntador que apunte a la primera direccion de memoria de codigo llamado ptr 
@@ -160,12 +147,26 @@ string Decodificar(const vector<string>& codigos, TreeNode* root) {
             retornar vacio*/
 // Algoritmo DFS para buscar el símbolo asociado a un código Morse
 
+string Decodificar(const vector<string>& codigos, TreeNode* root) {
+    string palabra;
+    for (string codigo : codigos) {
+        int idx = 0;
+        char letra = letra_codigo(root, codigo, idx);
+        if (letra != ' ') {
+            palabra += letra;
+        } else {
+            return ""; // No se pudo decodificar el código, retornar vacío
+        }
+    }
+    return palabra;
+}
+
 char letra_codigo(TreeNode* nodo, string& codigo, int idx){ //idx empezando en 0
     if(nodo == nullptr){
         return ' ';
     }
 
-    if(idx == codigo.size()){
+    if(idx + 1 == codigo.size()){
         return root->value;
     }
 
@@ -178,3 +179,6 @@ char letra_codigo(TreeNode* nodo, string& codigo, int idx){ //idx empezando en 0
     }
     return ' ';
 }
+
+
+

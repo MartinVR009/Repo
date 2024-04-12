@@ -14,6 +14,7 @@ def treeMax(root):
         leftMax = treeMax(root.left)
         rightMax = treeMax(root.right)
         return max(root.data, leftMax, rightMax)
+    
 
 def treeHeight(root):
     if root is None:
@@ -22,6 +23,7 @@ def treeHeight(root):
         leftHeight = treeHeight(root.left)
         rightHeight = treeHeight(root.right)
         return 1 + max(leftHeight, rightHeight)
+    
     
 def existsInTree(root, target):
     if root is None:

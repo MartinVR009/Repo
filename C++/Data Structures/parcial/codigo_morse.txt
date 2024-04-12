@@ -2,7 +2,8 @@
 //Se da por hecho que la cadena de puntos y rayas bajas es una cola de cadena de caracteres o una deque
 //Cuando paso la raiz, no se pasa el nodo actual, siempre un referente a la raiz del arbol 
 Insertar(raiz, simbolo, cadena)
-    si nodo actual es diferente de la raíz y cola de cadena está vacía
+
+    si nodo actual es diferente de la raíz y cola de cadena está vacía  
         nodo actual->valor = simbolo
 
     si simbolo es igual a "." 
@@ -22,9 +23,8 @@ Insertar(raiz, simbolo, cadena)
 
 Codificar(conjunto, codigo)
     para cada letra en conjunto
-        vector de cadenas de caracteres temporal llamado temporal
-        vector de cadenas de caracteres temporal llamado verificacion
-        dfs(nodo_actual,temporal, letra, verificacion)
+        cadenas de caracteres temporal llamado verificacion
+        dfs(nodo_actual,letra, verificacion)
         si verificacion es diferente de vacio 
             agregar a la cola de codigo verificacion
             verificacion igual a "" 
@@ -55,10 +55,12 @@ dfs(Nodo, objetivo, resultado)
     retornar vacio en caso de no encontrar nada
 
     
-//Se espera los codigos de la palabra en morse vengan separados por un " " espacio en blanco
+//Se espera que los codigos de decodificacion vengan en un vector de cadenas de caracteres
 
 3. Decodificar. 
 
+codigos = {".", "...", ".-"};
+palabra 
 Decodificar(codigos)
     crear cadena de caracteres vacia llamada palabra
     crear caracter vacio llamado temporal
@@ -70,7 +72,7 @@ Decodificar(codigos)
         si no
             retornar vacio
 
-letra_codigo(nodo, &codigo)
+letra_codigo(nodo, &codigo) //dfs
     crear apuntador que apunte a la primera direccion de memoria de codigo llamado ptr 
         si el caracter al que apunta ptr es igual a "." y nodo izquierdo es diferente de nulo
 
@@ -86,5 +88,3 @@ letra_codigo(nodo, &codigo)
                 retornar valor nodo derecho
         si no
             retornar vacio
-
-

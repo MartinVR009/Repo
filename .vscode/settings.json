@@ -61,6 +61,7 @@
     "stdio.h": "c",
     "cstdlib": "c",
     "unistd.h": "c",
-    "stdlib.h": "c"
+    "stdlib.h": "c",
+    "iostream": "cpp"
   }
 }

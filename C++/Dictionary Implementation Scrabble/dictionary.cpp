@@ -113,16 +113,12 @@ private:
   void addWord(string expression,
                dct d) { // Recibe el índice, la palabra y el diccionario
     keyIt = d.begin();  // Iterador apunta al inicio del diccionario
-    for (; keyIt != d.end();
-         keyIt++) { // Recorre diccionario hasta que encuentra el indicie
-      if (expression[0] ==
-          keyIt->key) { // Si la primera letra de la palabra coincide
-                        // con la la llave del iterador
-        Expr w(expression,
-               0); // Constructor de word, asigna la palabra y pone 0 al puntaje
+    for (; keyIt != d.end();keyIt++) { // Recorre diccionario hasta que encuentra el indicie
+      if (expression[0] == keyIt->key) { // Si la primera letra de la palabra coincide
+                                        // con la la llave del iterador
+        Expr w(expression,0); // Constructor de word, asigna la palabra y pone 0 al puntaje
         w.getPoints(); // Calcula el puntaje de la palabra y se lo asigna
-        keyIt->value.push_back(
-            w); // Añade la palabra a la lista de palabras de la keytemp
+        keyIt->value.push_back(w); // Añade la palabra a la lista de palabras de la keytemp
       }
     }
   }
@@ -153,19 +149,15 @@ private:
 
   // Metodos/Comportamiento
 public:
-  void inicializar(
-      string file_name) { // Inicializar, se le envía el nombre del archivo.txt
-    std::ifstream input_file(
-        file_name); // Entrada de archivos va a ser el canal input_file y se le
+  void inicializar(string file_name) { // Inicializar, se le envía el nombre del archivo.txt
+    std::ifstream input_file( file_name); // Entrada de archivos va a ser el canal input_file y se le
                     // asigna archivo.txt
     string letters; // Crea una palabra
     string subKey;  // Crea una subLlave
     if (input_file.is_open()) { // Si el canal está abieto
-      while (input_file >>
-             letters) { // Mientras el archivo siga conteniendo palabras
+      while (input_file >> letters) { // Mientras el archivo siga conteniendo palabras
         if (verifyWord(letters)) { // Verificar si la palabra es válida
-          addWord(letters,
-                  dictio); // Si la palabra es válida, añadir la palabra
+          addWord(letters,dictio); // Si la palabra es válida, añadir la palabra
         }
       }
       input_file.close(); // Cuando acaba de leer el archivo se cierra

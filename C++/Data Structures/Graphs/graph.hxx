@@ -8,25 +8,9 @@ Graph<T>::Graph(){
 }
 
 template<typename T>
-Graph<T>::Graph(bool directed, bool weighted){
+Graph<T>::Graph(bool directed){
     this->undirected = directed;
-    this->weighted =  weighted;
-}
-
-template<typename T>
-Graph<T>::Graph(T data, bool directed, bool weighted){
-    vertex.push_back(data);
-    total_elements = 1;
-    this->undirected = directed;
-    this->weighted =  weighted;
-}
-
-template<typename T>
-Graph<T>::Graph( T data, int weight, bool directed, bool weighted){
-    vertex.push_back(0);
-    total_elements = 1;
-    this->undirected = directed;
-    this->weighted =  weighted;
+    total_elements = 0;
 }
 
 //Gets 
@@ -36,7 +20,7 @@ int Graph<T>::getTotalElements(){
 }
 
 template<typename T>
-std::vector<std::vector<float>> Graph<T>::getGraph(){
+std::vector<std::vector<double>> Graph<T>::getGraph(){
     return graph;
 }
 
@@ -50,6 +34,7 @@ template<typename T>
 void Graph<T>::addVertex(T data){
     total_elements++;
     vertex.push_back(data);
+    std::vector<double> temp;
 }
 
 template<typename T>
@@ -91,7 +76,7 @@ void Graph<T>::deleteEdge(T origin, T destiny){
 }
 
 template<typename T>
-void Graph<T>::addEdgeW(T origin, T destiny, float weight){
+void Graph<T>::addEdgeW(T origin, T destiny, double weight){
     int origin_idx = returnIndex(origin);
     int destiny_idx = returnIndex(destiny);
 
@@ -99,6 +84,7 @@ void Graph<T>::addEdgeW(T origin, T destiny, float weight){
     if(graph.empty()){
         fillGraph();
     }
+
     graph[origin_idx][destiny_idx] = weight;
     if(undirected){
         graph[destiny_idx][origin_idx] = weight;
@@ -108,7 +94,7 @@ void Graph<T>::addEdgeW(T origin, T destiny, float weight){
 template<typename T>
 void Graph<T>::fillGraph(){
     for(int i = 0; i < total_elements; i++){
-        std::vector<float> temp;
+        std::vector<double> temp;
         for(int j = 0; j < total_elements; j++){
             temp.push_back(0);    
         }
@@ -213,6 +199,16 @@ bool Graph<T>::data_in(std::vector<T> vect, T data){
         }
     }
     return false;
+}
+
+template<typename T>
+void Graph<T>::clear_(){
+    vertex.clear();
+    for(auto &row : graph){
+        row.clear();
+    }
+    graph.clear();
+    total_elements = 0;
 }
 
 

@@ -18,16 +18,18 @@ int main() {
   graph.addEdge(3, 4);
 
   graph.printGraph();
-  graph.DFS(3, 1); // Calls recursive
+  graph.clear_();
 
-  std::cout << "\n Stack\n";
+  graph.addVertex(5);
+  graph.addVertex(6);
+  graph.addVertex(7);
+  graph.addVertex(8);
+  
+  graph.addEdge(5, 6);
+  graph.addEdge(7, 8);
+  graph.addEdge(6, 7);
+  graph.addEdge(5, 8);
 
-  graph.DFS(3, 0); // Calls Stack
-
-  std::cout << "\n Level \n";
-
-  graph.level(1);
-
-  std::cout << "\nFin\n";
+  graph.printGraph();
   return 0;
 }

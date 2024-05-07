@@ -11,21 +11,18 @@ template <typename T> // If unweighted graph, A go int for easier use
 class Graph {
 private:
   bool undirected;
-  bool weighted;
   int total_elements;
   std::vector<T> vertex;
-  std::vector<std::vector<float>> graph;
+  std::vector<std::vector<double>> graph;
 
 public:
   // Constructors
   Graph();
-  Graph(bool directed, bool weighted);
-  Graph(T data, bool directed, bool weighted);
-  Graph(T data, int weight, bool directed, bool weighted);
+  Graph(bool directed);
 
   // Gets
   int getTotalElements();
-  std::vector<std::vector<float>> getGraph();
+  std::vector<std::vector<double>> getGraph();
   std::vector<T> getVertex();
 
   // Methods
@@ -34,8 +31,8 @@ public:
   int returnIndex(T data);
 
   // Only available when Graph is weighted = true;
-  void addVertexWeight(T data, float weight);
-  void addEdgeW(T origin, T destiny, float weight);
+  void addVertexWeight(T data, double weight);
+  void addEdgeW(T origin, T destiny, double weight);
 
   // Edge Management
   void addEdge(T origin, T destiny);
@@ -55,7 +52,7 @@ public:
   void STP(T origin, T destiny);
 
   // Others
-  void restartVisited();
+  void clear_();
   bool data_in(std::vector<T> visited, T data);
 };
 

@@ -1,91 +1,97 @@
 #include "graph.h"
 
-template<typename T>
-Vertex<T>::Vertex(int index, T data){
-    this->index = index;
-    this->data = data;
-    this->fnd = false;
-}
-
-template<typename T>
-Vertex<T>::Vertex(T data){
-    this->index = 0;
-    this->data = data;
-    this->fnd = false;
-}
-
-
 //Graph
-template<typename T, typename A>
-Graph<T,A>::Graph(){
+template<typename T>
+Graph<T>::Graph(){
     undirected = true;
     total_elements = 0;
 }
 
-template<typename T, typename A>
-Graph<T,A>::Graph(bool directed, bool weighted){
+template<typename T>
+Graph<T>::Graph(bool directed, bool weighted){
     this->undirected = directed;
     this->weighted =  weighted;
 }
 
-template<typename T, typename A>
-Graph<T,A>::Graph(T data, bool directed, bool weighted){
-    vertex.push_back(Vertex<T>(0, data));
+template<typename T>
+Graph<T>::Graph(T data, bool directed, bool weighted){
+    vertex.push_back(data);
     total_elements = 1;
     this->undirected = directed;
     this->weighted =  weighted;
 }
 
-template<typename T, typename A>
-Graph<T,A>::Graph( T data, int weight, bool directed, bool weighted){
-    vertex.push_back(Vertex<T>(0, data, weight));
+template<typename T>
+Graph<T>::Graph( T data, int weight, bool directed, bool weighted){
+    vertex.push_back(0);
     total_elements = 1;
     this->undirected = directed;
     this->weighted =  weighted;
 }
 
 //Gets 
-template<typename T, typename A>
-int Graph<T,A>::getTotalElements(){
+template<typename T>
+int Graph<T>::getTotalElements(){
     return total_elements;
 }
 
-template<typename T, typename A>
-std::vector<std::vector<Edge<A>>> Graph<T,A>::getGraph(){
+template<typename T>
+std::vector<std::vector<float>> Graph<T>::getGraph(){
     return graph;
 }
 
-template<typename T, typename A>
-std::vector<Vertex<T>> Graph<T,A>:: getVertex(){
+template<typename T>
+std::vector<T> Graph<T>:: getVertex(){
     return vertex;
 }
 
 //Methods
-template<typename T, typename A>
-void Graph<T,A>::addVertex(T data){
-    Vertex<T> vertex_add(total_elements++, data);
-    vertex.push_back(vertex_add);
+template<typename T>
+void Graph<T>::addVertex(T data){
+    total_elements++;
+    vertex.push_back(data);
 }
 
-
-template<typename T, typename A>
-void Graph<T,A>::addVertexV(Vertex<T> vertex_add){
-    vertex_add.index = total_elements++;
-    vertex_add.fnd = false;
-    vertex.push_back(vertex_add);
-}
-
-template<typename T, typename A>
-int Graph<T,A>::returnIndex(T data){
-    for(Vertex<T> v : vertex){
-        if(v.data == data){
-            return v.index;
+template<typename T>
+int Graph<T>::returnIndex(T data){
+    int i = 0;
+    for(T v : vertex){
+        if(v == data){
+            return i;
         }
+        i++;
+    }
+  return -1;
+}
+
+template<typename T>
+void Graph<T>::addEdge(T origin, T destiny){
+    int origin_idx = returnIndex(origin);
+    int destiny_idx = returnIndex(destiny);
+    
+    // If the graph is empty, fill it with the adjacency matrix
+    if(graph.empty()){
+        fillGraph();
+    }
+    graph[origin_idx][destiny_idx] = 1;
+    if(undirected){
+        graph[destiny_idx][origin_idx] = 1 ;
     }
 }
 
-template<typename T, typename A>
-void Graph<T,A>::addEdge(T origin, T destiny){
+template<typename T>
+void Graph<T>::deleteEdge(T origin, T destiny){
+    int origin_idx = returnIndex(origin);
+    int destiny_idx = returnIndex(destiny);
+
+    graph[origin_idx][destiny_idx] = 0;
+    if(undirected){
+        graph[destiny_idx][origin_idx] = 0;
+    }
+}
+
+template<typename T>
+void Graph<T>::addEdgeW(T origin, T destiny, float weight){
     int origin_idx = returnIndex(origin);
     int destiny_idx = returnIndex(destiny);
 
@@ -93,51 +99,25 @@ void Graph<T,A>::addEdge(T origin, T destiny){
     if(graph.empty()){
         fillGraph();
     }
-    graph[origin_idx][destiny_idx] = Edge<A>(1);
+    graph[origin_idx][destiny_idx] = weight;
     if(undirected){
-        graph[destiny_idx][origin_idx] = Edge<A>(1);
+        graph[destiny_idx][origin_idx] = weight;
     }
 }
 
-template<typename T, typename A>
-void Graph<T,A>::deleteEdge(T origin, T destiny){
-    int origin_idx = returnIndex(origin);
-    int destiny_idx = returnIndex(destiny);
-
-    graph[origin_idx][destiny_idx] = Edge<A>(0);
-    if(undirected){
-        graph[destiny_idx][origin_idx] = Edge<A>(0);
-    }
-}
-
-template<typename T, typename A>
-void Graph<T,A>::addEdgeW(T origin, T destiny, A weight){
-    int origin_idx = returnIndex(origin);
-    int destiny_idx = returnIndex(destiny);
-
-    // If the graph is empty, fill it with the adjacency matrix
-    if(graph.empty()){
-        fillGraph();
-    }
-    graph[origin_idx][destiny_idx] = Edge<A>(1);
-    if(undirected){
-        graph[destiny_idx][origin_idx] = Edge<A>(1);
-    }
-}
-
-template<typename T, typename A>
-void Graph<T,A>::fillGraph(){
+template<typename T>
+void Graph<T>::fillGraph(){
     for(int i = 0; i < total_elements; i++){
-        std::vector<Edge<A>> temp;
+        std::vector<float> temp;
         for(int j = 0; j < total_elements; j++){
-            temp.push_back(Edge<A>());    
+            temp.push_back(0);    
         }
         graph.push_back(temp);
     }
 }
 
-template<typename T, typename A>
-void Graph<T, A>::printGraph() {
+template<typename T>
+void Graph<T>::printGraph() {
     // Print the header row with vertex indices
     std::cout << "  ";
     for (int i = 0; i < total_elements; ++i) {
@@ -150,11 +130,89 @@ void Graph<T, A>::printGraph() {
         std::cout << i + 1 << " "; // Print the vertex index
 
         for (int j = 0; j < total_elements; ++j) {
-            std::cout << graph[i][j].weight << " "; // Print the connection weight
+            std::cout << graph[i][j] << " "; // Print the connection weight
         }
         std::cout << std::endl;
     }
 }
 
+template<typename T>
+void Graph<T>:: DFS(T origin, int mode){
+    std::vector<T> visited;
+    if(mode == 1){
+        DFS_recursion(origin, visited);
+    }else{
+        DFS_stack(origin,visited);
+    }
+}
+
+template<typename T>
+void Graph<T>::DFS_recursion(T origin, std::vector<T> &visited){
+  int temp = returnIndex(origin);
+  visited.push_back(origin);
+  std::cout<<vertex[temp]<<",";
+  for(int i = 0; i < total_elements; i++){
+    if(graph[i][temp] >= 1){
+      if(!data_in(visited,vertex[i])){
+        DFS_recursion(vertex[i],visited);
+      }
+    }
+  }
+}
+
+template<typename T>
+void Graph<T>::DFS_stack(T origin, std::vector<T> &visited){
+  std::stack<T> visited_stack;
+  visited_stack.push(origin);
+
+  while(!visited_stack.empty()){
+    T actual = visited_stack.top();
+    visited_stack.pop();
+    if(!data_in(visited, vertex[returnIndex(actual)])){
+      std::cout<<actual<<",";
+      visited.push_back(vertex[returnIndex(actual)]);
+      for(int i = 0; i < total_elements; i++){
+        if(graph[i][returnIndex(actual)] >= 1 && !data_in(visited, vertex[i])){
+          visited_stack.push(vertex[i]);
+        }
+      }
+    }
+  }
+}
+
+/*std::cout <<"\n Index: " << i << " Value: " << vertex[i].getData() << " Weight: " << graph[i][returnIndex(actual)].weight <<" \n";
+        if(graph[i][returnIndex(actual)].weight >= 1 && !vertex[i].getFND()){
+          std::cout <<"\n"<<vertex[i].getData() <<" Added to stack!\n";*/
+
+template<typename T>
+void Graph<T>::level(T origin){
+  std::vector<T> visited;
+  std::queue<T> visited_queue;
+  visited_queue.push(origin);
+
+  while(!visited_queue.empty()){
+    T actual = visited_queue.front();
+    visited_queue.pop();
+    if(!data_in(visited, vertex[returnIndex(actual)])){
+      std::cout << actual <<",";
+      visited.push_back(vertex[returnIndex(actual)]);
+      for(int i = 0; i < total_elements; i++){
+        if(graph[i][returnIndex(actual)] >= 1 && !data_in(visited,vertex[i])){
+          visited_queue.push(vertex[i]);
+        }
+      }
+    }
+  }
+}
+
+template<typename T>
+bool Graph<T>::data_in(std::vector<T> vect, T data){
+    for(T v : vect){
+        if(v == data){
+            return true;
+        }
+    }
+    return false;
+}
 
 

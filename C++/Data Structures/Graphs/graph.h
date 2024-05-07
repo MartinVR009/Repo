@@ -2,83 +2,61 @@
 #define _GRAPH_H_
 
 #include <iostream>
-#include <vector>
 #include <queue>
+#include <stack>
 #include <string>
+#include <vector>
 
-template <typename T>
-struct Edge
-{
-    T weight;
-    bool visited;
+template <typename T> // If unweighted graph, A go int for easier use
+class Graph {
+private:
+  bool undirected;
+  bool weighted;
+  int total_elements;
+  std::vector<T> vertex;
+  std::vector<std::vector<float>> graph;
 
-    Edge(){
-        this->weight = 0;
-        visited = false;
-    }
+public:
+  // Constructors
+  Graph();
+  Graph(bool directed, bool weighted);
+  Graph(T data, bool directed, bool weighted);
+  Graph(T data, int weight, bool directed, bool weighted);
 
-    Edge(T weight){
-        this->weight = weight;
-        visited = false;
-    }
-};
+  // Gets
+  int getTotalElements();
+  std::vector<std::vector<float>> getGraph();
+  std::vector<T> getVertex();
 
+  // Methods
+  void addVertexV(T vertex_add);
+  void addVertex(T data);
+  int returnIndex(T data);
 
-template <typename T>
-class Vertex{
-    public:
-        T data;
-        int index;
-        bool fnd;
+  // Only available when Graph is weighted = true;
+  void addVertexWeight(T data, float weight);
+  void addEdgeW(T origin, T destiny, float weight);
 
-        Vertex(T data);
-        Vertex(int index, T data);
+  // Edge Management
+  void addEdge(T origin, T destiny);
+  void deleteEdge(T origin, T destiny);
 
-        T getData();
-        int getIndex();
-        bool getFND();
+  void fillGraph();
+  void printGraph();
 
-        operator==(const Vertex& b) const{
-            return this->data == b.data;
-        }
-};  
+  // Traverse
+  void flat();
+  void DFS(T origin, int mode);
+  void DFS_stack(T origin, std::vector<T> &visited);
+  void DFS_recursion(T origin, std::vector<T> &visited);
+  void level(T origin);
 
-template <typename T, typename A> //If unweighted graph, A go int for easier use
-class Graph{
-    private:
-        bool undirected;
-        bool weighted;
-        int total_elements;
-        std::vector<Vertex<T>> vertex;
-        std::vector<std::vector<Edge<A>>> graph;
+  // Algorithms
+  void STP(T origin, T destiny);
 
-    public:
-        //Constructors
-        Graph();
-        Graph(bool directed, bool weighted);
-        Graph(T data, bool directed, bool weighted);
-        Graph(T data, int weight, bool directed, bool weighted);
-
-        //Gets
-        int getTotalElements();
-        std::vector<std::vector<Edge<A>>> getGraph();
-        std::vector<Vertex<T>> getVertex();
-
-        //Methods
-        void addVertexV(Vertex<T> vertex_add);
-        void addVertex(T data);
-        int returnIndex(T data);
-
-        //Only available when Graph is weighted = true;
-        void addVertexWeight(T data, A weight);
-        void addEdgeW(T origin, T destiny, A weight);
-
-        //Edge Management
-        void addEdge(T origin, T destiny);
-        void deleteEdge(T origin, T destiny);
-        
-        void fillGraph();
-        void printGraph();
+  // Others
+  void restartVisited();
+  bool data_in(std::vector<T> visited, T data);
 };
 
 #include "graph.hxx"

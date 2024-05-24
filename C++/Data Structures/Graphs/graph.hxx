@@ -1,4 +1,17 @@
 #include "graph.h"
+#include <utility>
+#include <limits>
+
+template<typename T>
+std::ostream& operator<<(std::ostream& s, const std::pair<T,T>& p){
+    return s << "{" << p.first << ", " << p.second<< "} ";
+}
+
+template<typename T>
+bool operator==(const std::pair<T, T>& lhs, const std::pair<T, T>& rhs) {
+    return lhs.first == rhs.first && lhs.second == rhs.second;
+}
+
 
 //Graph
 template<typename T>
@@ -46,7 +59,7 @@ int Graph<T>::returnIndex(T data){
         }
         i++;
     }
-  return -1;
+    return -1;
 }
 
 template<typename T>
@@ -166,10 +179,6 @@ void Graph<T>::DFS_stack(T origin, std::vector<T> &visited){
   }
 }
 
-/*std::cout <<"\n Index: " << i << " Value: " << vertex[i].getData() << " Weight: " << graph[i][returnIndex(actual)].weight <<" \n";
-        if(graph[i][returnIndex(actual)].weight >= 1 && !vertex[i].getFND()){
-          std::cout <<"\n"<<vertex[i].getData() <<" Added to stack!\n";*/
-
 template<typename T>
 void Graph<T>::level(T origin){
   std::vector<T> visited;
@@ -211,4 +220,191 @@ void Graph<T>::clear_(){
     total_elements = 0;
 }
 
+template<typename T>
+void Graph<T>::prim(){
 
+}
+
+bool notIn(std::vector<std::pair<int,int>> vect, std::pair<int,int> data){
+    for(std::pair<int,int> p : vect){
+        if(p == data){
+            return false;
+        }
+    }
+    return true;
+}
+
+template <typename T>
+std::pair<int, int> Graph<T>::minEdge(std::vector<bool> inMST, std::vector<std::pair<int,int>> visited) {
+        double minWeight = std::numeric_limits<double>::max();
+        std::pair<int, int> minEdgeIndices;
+        
+        for (int i = 0; i < total_elements; i++) {
+            std::cout <<"inMST[" << i <<"] es " << inMST[i] <<  "\n";
+            if(inMST[i]){
+                for (int col = 0; col < total_elements; ++col) {
+                    if (graph[col][i] != 0 && graph[col][i] < minWeight && notIn(visited, {i,col}) && !inMST[col]) {
+                        std::cout << "Vertex["<<i<<"] = << "<<vertex[i] <<  "vs Vertex[" <<col <<"]="<<vertex[col] << "Distancia: " << graph[col][i] << "\n";
+                        minWeight = graph[col][i];
+                        minEdgeIndices = {i, col};
+                    }
+                }
+            }
+        }
+        std::cout<<"Termino uno!\n";
+        std::cout<<"minWeight = " << minWeight << "\n";
+        std::cout<<"minEdgeIndices = " << minEdgeIndices <<"\n";
+
+        return minEdgeIndices;
+    }
+template<typename T>
+void Graph<T>::primXY(std::vector<std::pair<T, T>> &mst){
+
+        // Vector para marcar los vértices incluidos en el MST
+        std::vector<bool> inMST(total_elements, false);
+
+        std::vector<std::pair<int,int>> visited_edges(total_elements);
+
+        std::pair<int,int>temp;
+        // Elegir un vértice aleatorio como punto de inicio
+        int startVertex = 0;
+
+        //mst.push_back({vertex[startVertex], vertex[startVertex]});
+        inMST[startVertex] = true;
+        
+        while (mst.size() != total_elements-1)
+        {   
+            // Encontrar el vértice más cercano no incluido en el MST
+            temp = minEdge(inMST, visited_edges);
+            visited_edges.push_back(temp);
+            inMST[temp.second] = true;
+            mst.push_back({vertex[temp.first],vertex[temp.second]});
+        }
+
+        std::cout << "Arbol de Minima Expansion:" << std::endl;
+        for (const auto& edge : mst) {
+            std::cout << edge.first << " - " << edge.second << std::endl;
+        }
+}
+
+template<typename T>
+struct Dijkstra_data<T> Graph<T>::Dijkstra(T origin){
+
+    std::vector<T> S; //visited
+    std::vector<float> dist(total_elements, INF);
+    std::vector<T> pred(total_elements);
+    float min;
+
+    int index_a = returnIndex(origin);
+    S.push_back(origin);
+    pred[index_a] = vertex[index_a];
+    dist[index_a] = 0;
+    while(S.size() < total_elements){
+        for(int i = 0; i < total_elements; i++){
+            if(graph[index_a][i] != 0){
+                if(dist[i] > graph[index_a][i] + dist[index_a]){
+                    dist[i] = graph[index_a][i] + dist[index_a];
+                    pred[i] = vertex[index_a];
+                }
+            }
+        }
+        min = INF;
+        for(int i = 0; i < total_elements; i++){
+            if(dist[i] < min && !data_in(S,vertex[i])){
+                index_a = returnIndex(vertex[i]);
+            }
+        }
+        S.push_back(vertex[index_a]);
+    }
+    struct Dijkstra_data<T> data_r;
+    data_r.distance = dist;
+    data_r.predecesors = pred;
+
+    return data_r;
+
+}
+
+template<typename T>
+void Graph<T>::shortest_path(T origin, T destiny) {
+    // Obtener los resultados del algoritmo de Dijkstra
+    Dijkstra_data<T> dijkstra;
+    dijkstra = Dijkstra(origin);
+
+    // Reconstruir el camino más corto desde el vértice de destino hasta el origen
+    std::stack<T> path;
+    T current_vertex = destiny;
+    while (current_vertex != origin) {
+        path.push(current_vertex);
+        // Obtener el predecesor del vértice actual en el camino más corto
+        T predecessor = dijkstra.predecesors[returnIndex(vertex, current_vertex)];
+        current_vertex = predecessor;
+    }
+    // Agregar el vértice de origen al camino
+    path.push(origin);
+    
+    // Imprimir el camino más corto
+    while (!path.empty()) {
+        T data = path.top();
+        std::cout << data;
+        path.pop();
+        if(!path.empty()){
+            std::cout<<"->";
+        }
+    }
+    std::cout << std::endl;
+}
+
+template<typename T>
+void Graph<T>::DFScomponent(T v, std::vector<bool>& visited) {
+    visited[returnIndex(v)] = true;
+    std::cout << v << " ";
+
+    for (int i = 0; i < total_elements; ++i) {
+        if (graph[returnIndex(v)][i] && !visited[i]) {
+            DFScomponent(vertex[i], visited);
+        }
+    }
+}
+
+template<typename T>
+void Graph<T>::componentes() {
+    std::vector<bool> visited(total_elements, false);
+
+    for (int v = 0; v < total_elements; ++v) {
+        if (!visited[v]) {
+            DFScomponent(vertex[v], visited);
+            std::cout << std::endl;
+        }
+    }
+}
+
+//Todos los posibles caminos con DFS
+
+
+using namespace std;
+
+//Algoritmos Parcial
+template <typename K>
+void path_a(vector<vector<K>>& graph, vector<vector<K>>& result, vector<K>& path, K actual, K target) {
+        path.push_back(actual);
+        if (actual == target) {
+            result.push_back(path);
+        } else {
+            for (int i = 0; i < total_elements; i++) {
+                if(graph[actual][i] != 0){
+                    path_a(graph, result, path, vertex[i], target);
+                }
+            }
+        }
+        path.pop_back(); 
+}
+
+
+Graph<int> graph;
+
+template <typename K>
+vector<vector<K>> allPaths(K origin, K target){
+    vector<vector<K>> result;
+    vector<K> path;
+    path_a(graph, result, path, origin, target);
+}

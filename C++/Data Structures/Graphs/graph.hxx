@@ -222,7 +222,7 @@ void Graph<T>::clear_(){
 
 template<typename T>
 void Graph<T>::prim(){
-
+    
 }
 
 bool notIn(std::vector<std::pair<int,int>> vect, std::pair<int,int> data){
